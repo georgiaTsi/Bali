@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Amsterdam!</string>
+
+    <string name="action_notes">Notes</string>
+
+    <string name="title_activity_detailed">Settings</string>
+    <string name="title_activity_notes">Notes</string>
+
+    <string name="museums">Μουσεία</string>
+    <string name="palace">Βασιλεία</string>
+    <string name="churches">Εκκλησίες</string>
+    <string name="parks">Πάρκα</string>
+    <string name="food">Φαγητό</string>
+    <string name="drink">Ποτό</string>
+    <string name="shopping">Ψώνια</string>
+    <string name="rijksmuseum">Μουσείο Rijksmuseum (Ρέικσμουζεουμ)</string>
+    <string name="vangogh">Μουσείο Van Gogh</string>
+    <string name="stedelijk">Μουσείο Stedelijk </string>
+
+    <string name="museumsText">Το Άμστερνταμ έρχεται πρώτο σε αναλογία συγκέντρωσης μουσείων στον κόσμο αφού διαθέτει πάνω από 60! Τα τρία βασικά βρίσκονται γύρω από την πλατεία Museumplein, στην παλιά νότια συνοικία: \n 1)Rijksmuseum(το σπουδαιότερο μουσείο της χώρας και διαθέτει έργα των μεγαλύτερων Ολλανδών ζωγράφων), \n2) Van Gogh(είναι συγκεντρωμένη η μεγαλύτερη συλλογή έργων του Ολλανδού ζωγράφου), \n3)Stedelijk(έχει μοντέρνα έργα τέχνης καλλιτεχνών όπως ο Μονέ και Ματίας)</string>
+    <string name="palaceText">Το πολίτευμα της χώρας είναι Βασιλευόμενη Κοινοβουλευτική Δημοκρατία και από το 2013 βασιλιάς της χώρας είναι ο Γουλιέλμος-Αλέξανδρος. Θα δείτε το Koninklijk Paleis, το βασιλικό ανάκτορο στην πλατεία Dam αν και η βασιλική οικογένεια κατοικεί συνήθως στη Χάγη. Το μεγαλύτερο event της πόλης είναι το Koningsdag, η Μέρα του Βασιλιά στις 27 Απριλίου, όταν το Άμστερνταμ κατακλύζεται από ένα τεράστιο, πορτοκαλί street party.</string>
+    <string name="churchesText">Για να απολαύσετε την καλύτερη θέα της πόλης από ψηλά, θα ανεβείτε σε 3 από τις ομορφότερες εκκλησίες του Άμστερνταμ: την Zuiderkerk, την Oude Kerk του 1306 που αποτελείται από το παλαίοτερο κτίσμα της πόλης και την Westerkerk.</string>
+    <string name="parksText">Η αγαπημένη απόδραση των ντόπιων γίνεται στο πελώριο Vondelpark, με κήπους, λιμνούλες, γεφυράκια, φιδογυριστά μονοπάτια και γλυπτά, όπως το \'Ψάρι\' του Πικάσο. Άλλα αγαπημένα πάρκα είναι το Sarphatipark και το Westerpark, δίπλα στο παλιό εργοστάσιο φωταερίου που πλέον αποτελεί χώρο πολιτισμού. Όαση αποτελούν και οι Hortus Botanicus, Που ιδρύθηκαν απο το 1638 και είναι από τους παλαιότερους βοτανικούς κήπους στον κόσμο.</string>
+    <string name="foodText">Τα περισσότερα έθνικ εστιατόρια βρίσκονται στους δρόμους Utrechtsestraat κοντά στην Rembrandtplein και Amstelveenseweg στην δυτική άκρη του Vondelpark</string>
+    <string name="drinkText">Τα περισσότερα clubs και μπαρ της πόλης βρίσκονται γύρω από τις πλατείες Rembrandtplein και Leidseplein, στο μεσαιωνικό κέντρο και το Red Light Distrinct. Ωστόσο, αν θέλετε μια πιο αυθεντική εμπειρία θα επιλέξετε ένα bruin cafe, δηλαδή τις αυθεντικ΄ρεε ολλανδικές παμπ. Oι Hoppe και Het Papeneiland είναι 2 από αυτές. Αν είστε περίεργοι να δοκιμάσετε προΙόντα από κάνναβη, τότε θα καθίσετε σε ένα από τα πολλά Coffeeshops. Τα Dampkring και Abraxas είναι από τα διασημότερα.</string>
+    <string name="shoppingText">Ακολουθήστε τους ντόπιους στις υπαίθριες αγορές όπως η Lindengracht Market στη συνοικία Jordaan ή η μεγαλύτερη αγορά της πόλης, η Albert Cuypmarkt. Εκεί θα προμηθευτείτε τα διάσημα ολλανδικά τυριά gouda και edam, και άλλα. Αν επινάσετε θα φάτε τηγανιτές πατάτες με μαγιονέζα, ρέγγες με ψιλοκομμένο κρεμμύδι, αλλά και stroopwafels, ένα ολλανδικό γλύκισμα που μοιάζει με μπισκότα βάφλας γεμιστό με καραμέλα. Η Bloemenmarkt είναι πλωτή αγορά λουλουδιών.</string>
+    <string name="rijksmuseumText">Ένα από τα πιο δημοφιλή μουσεία του Άμστερνταμ. Είναι αφιερωμένο στις τέχνες και την ιστορία. Είναι φημισμένο για τη μεγάλη συλλογή πινάκων από την ολλανδική χρυσή εποχή στη ζωγραφική (17ος αι.) που περιλαμβάνει μερικά από τα πιο γνωστά έργα ολλανδικής ζωγραφικής δημιουργών όπως ο Ρέμπραντ, ο Γιαν Στέιν, ο Βέρμεερ, καθώς και την εκτεταμένη του συλλογή ασιατικής τέχνης. Το μουσείο διαθέτει γύρω στο ένα εκατομμύριο αντικείμενα στη συλλογή του και δέχεται περίπου ισάριθμους επισκέπτες το χρόνο. Ιδρύθηκε το 1798.
+For a special experience, try the fun art history canal cruise taking in many of the sites represented in the Rijksmuseum\'s collections. To εστιατόριο του μουσείου έχει αστέρι Michelin.</string>
+    <string name="vangoghText">Το Μουσείο Βαν Γκογκ είναι μουσείο τέχνης του Άμστερνταμ, το οποίο περιλαμβάνει κυρίως έργα του Ολλανδού ζωγράφου Βίνσεντ βαν Γκογκ αλλά και άλλων σύγχρονών του καλλιτεχνών. Περιέχει τη μεγαλύτερη συλλογή πινάκων του βαν Γκογκ σε όλο τον κόσμο. Το 2017 ήταν το μουσείο με τη μεγαλύτερη επισκεψιμότητα στην Ολλανδία, με 2,26 εκατομύρια επισκέπτες.\n Η μόνιμη έκθεση του μουσείου περιλαμβάνει έργα του βαν Γκογκ, χρονολογικά, από την περίοδο της εφηβείας του μέχρι το τέλος της ζωής του. Ανάμεσα στους πίνακες που ξεχωρίζουν ανήκει και μία εκδοχή από τα Ηλιοτρόπια. Το μουσείο διαθέτει ακόμα βιβλιοθήκη με υλικό που αφορά στη ζωή και το έργο του βαν Γκογκ.Παράλληλα φιλοξενούνται και έργα άλλων σημαντικών καλλιτεχνών, όπως του Εντουάρ Μανέ, του Πωλ Γκωγκέν, καθώς και ένα γλυπτό του Ωγκύστ Ροντέν.</string>
+    <string name="stedelijkText">Είναι Μουσείο μοντέρνας τέχνης.</string>
+
+    <string name="title_activity_detailed_with_title">DetailedWithTitleActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+</resources>
