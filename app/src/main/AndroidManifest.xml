@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Amsterdam">
         <activity
             android:name=".DetailedWithTitleActivity"
-            android:label="@string/title_activity_detailed_with_title"></activity>
+            android:theme="@style/Theme.Amsterdam.NoActionBar"/>
         <activity
             android:name=".DetailedActivity"
             android:label="@string/title_activity_detailed"

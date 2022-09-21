@@ -69,11 +69,14 @@ public class MainActivity extends AppCompatActivity {
     private void populateList(){
         //All
         allItemsList.add(new Item(getResources().getString(R.string.museums), ResourcesCompat.getDrawable(getResources(), R.drawable.rijksmuseum, null), DetailedWithTitleActivity.GeneralPlaces.Museums, null));
-        allItemsList.add(new Item(getResources().getString(R.string.palace), ResourcesCompat.getDrawable(getResources(), R.drawable.amsterdam, null), DetailedWithTitleActivity.GeneralPlaces.Palace, null));
-        allItemsList.add(new Item(getResources().getString(R.string.churches), ResourcesCompat.getDrawable(getResources(), R.drawable.amsterdam, null), DetailedWithTitleActivity.GeneralPlaces.Churches, null));
-        allItemsList.add(new Item(getResources().getString(R.string.parks), ResourcesCompat.getDrawable(getResources(), R.drawable.amsterdam, null), DetailedWithTitleActivity.GeneralPlaces.Parks, null));
+        allItemsList.add(new Item(getResources().getString(R.string.palace), ResourcesCompat.getDrawable(getResources(), R.drawable.palace, null), DetailedWithTitleActivity.GeneralPlaces.Palace, null));
+        allItemsList.add(new Item(getResources().getString(R.string.churches), ResourcesCompat.getDrawable(getResources(), R.drawable.oude_kerk, null), DetailedWithTitleActivity.GeneralPlaces.Churches, null));
+        allItemsList.add(new Item(getResources().getString(R.string.parks), ResourcesCompat.getDrawable(getResources(), R.drawable.vondelpark, null), DetailedWithTitleActivity.GeneralPlaces.Parks, null));
         allItemsList.add(new Item(getResources().getString(R.string.food), ResourcesCompat.getDrawable(getResources(), R.drawable.amsterdam, null), DetailedWithTitleActivity.GeneralPlaces.Food, null));
         allItemsList.add(new Item(getResources().getString(R.string.drink), ResourcesCompat.getDrawable(getResources(), R.drawable.amsterdam, null), DetailedWithTitleActivity.GeneralPlaces.Drink, null));
+        allItemsList.add(new Item(getResources().getString(R.string.other), ResourcesCompat.getDrawable(getResources(), R.drawable.adam_lookout, null), DetailedWithTitleActivity.GeneralPlaces.Other, null));
+        allItemsList.add(new Item(getResources().getString(R.string.neighborhood), ResourcesCompat.getDrawable(getResources(), R.drawable.jordaan, null), DetailedWithTitleActivity.GeneralPlaces.Neighborhood, null));
+        allItemsList.add(new Item(getResources().getString(R.string.shopping), ResourcesCompat.getDrawable(getResources(), R.drawable.kalverstraat, null), DetailedWithTitleActivity.GeneralPlaces.Shopping, null));
 
         itemAdapter.updateAdapter(allItemsList);
     }

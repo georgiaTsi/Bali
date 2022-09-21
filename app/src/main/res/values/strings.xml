@@ -6,17 +6,32 @@
     <string name="title_activity_detailed">Settings</string>
     <string name="title_activity_notes">Notes</string>
 
+    <!--Titles-->
     <string name="museums">Μουσεία</string>
     <string name="palace">Βασιλεία</string>
     <string name="churches">Εκκλησίες</string>
     <string name="parks">Πάρκα</string>
     <string name="food">Φαγητό</string>
     <string name="drink">Ποτό</string>
+    <string name="other">Άλλο</string>
     <string name="shopping">Ψώνια</string>
+    <string name="neighborhood">Γειτονιές</string>
     <string name="rijksmuseum">Μουσείο Rijksmuseum (Ρέικσμουζεουμ)</string>
     <string name="vangogh">Μουσείο Van Gogh</string>
     <string name="stedelijk">Μουσείο Stedelijk </string>
+    <string name="centralStation">Amsterdam Centraal</string>
+    <string name="museumRembrand">Οικία - Μουσείο Ρέμπραντ</string>
+    <string name="vondelpark">Vondelpark</string>
+    <string name="adamLookout">A\'dam Lookout</string>
+    <string name="jordaan">Jordaan (Γιορντάαν)</string>
+    <string name="museumQuarter">Museum Quarter</string>
+    <string name="damSquare">Πλατεία Νταμ</string>
+    <string name="royalPalace">Βασιλικό Παλάτι</string>
+    <string name="oudeKerk">Εκκλησία Oude Kerk</string>
+    <string name="westerkerk">Εκκλησία Westerkerk</string>
+    <string name="kalverstraat">Λεωφόρος Kalverstraat (Κάλβερ)</string>
 
+    <!--Texts-->
     <string name="museumsText">Το Άμστερνταμ έρχεται πρώτο σε αναλογία συγκέντρωσης μουσείων στον κόσμο αφού διαθέτει πάνω από 60! Τα τρία βασικά βρίσκονται γύρω από την πλατεία Museumplein, στην παλιά νότια συνοικία: \n 1)Rijksmuseum(το σπουδαιότερο μουσείο της χώρας και διαθέτει έργα των μεγαλύτερων Ολλανδών ζωγράφων), \n2) Van Gogh(είναι συγκεντρωμένη η μεγαλύτερη συλλογή έργων του Ολλανδού ζωγράφου), \n3)Stedelijk(έχει μοντέρνα έργα τέχνης καλλιτεχνών όπως ο Μονέ και Ματίας)</string>
     <string name="palaceText">Το πολίτευμα της χώρας είναι Βασιλευόμενη Κοινοβουλευτική Δημοκρατία και από το 2013 βασιλιάς της χώρας είναι ο Γουλιέλμος-Αλέξανδρος. Θα δείτε το Koninklijk Paleis, το βασιλικό ανάκτορο στην πλατεία Dam αν και η βασιλική οικογένεια κατοικεί συνήθως στη Χάγη. Το μεγαλύτερο event της πόλης είναι το Koningsdag, η Μέρα του Βασιλιά στις 27 Απριλίου, όταν το Άμστερνταμ κατακλύζεται από ένα τεράστιο, πορτοκαλί street party.</string>
     <string name="churchesText">Για να απολαύσετε την καλύτερη θέα της πόλης από ψηλά, θα ανεβείτε σε 3 από τις ομορφότερες εκκλησίες του Άμστερνταμ: την Zuiderkerk, την Oude Kerk του 1306 που αποτελείται από το παλαίοτερο κτίσμα της πόλης και την Westerkerk.</string>
@@ -28,16 +43,19 @@
 For a special experience, try the fun art history canal cruise taking in many of the sites represented in the Rijksmuseum\'s collections. To εστιατόριο του μουσείου έχει αστέρι Michelin.</string>
     <string name="vangoghText">Το Μουσείο Βαν Γκογκ είναι μουσείο τέχνης του Άμστερνταμ, το οποίο περιλαμβάνει κυρίως έργα του Ολλανδού ζωγράφου Βίνσεντ βαν Γκογκ αλλά και άλλων σύγχρονών του καλλιτεχνών. Περιέχει τη μεγαλύτερη συλλογή πινάκων του βαν Γκογκ σε όλο τον κόσμο. Το 2017 ήταν το μουσείο με τη μεγαλύτερη επισκεψιμότητα στην Ολλανδία, με 2,26 εκατομύρια επισκέπτες.\n Η μόνιμη έκθεση του μουσείου περιλαμβάνει έργα του βαν Γκογκ, χρονολογικά, από την περίοδο της εφηβείας του μέχρι το τέλος της ζωής του. Ανάμεσα στους πίνακες που ξεχωρίζουν ανήκει και μία εκδοχή από τα Ηλιοτρόπια. Το μουσείο διαθέτει ακόμα βιβλιοθήκη με υλικό που αφορά στη ζωή και το έργο του βαν Γκογκ.Παράλληλα φιλοξενούνται και έργα άλλων σημαντικών καλλιτεχνών, όπως του Εντουάρ Μανέ, του Πωλ Γκωγκέν, καθώς και ένα γλυπτό του Ωγκύστ Ροντέν.</string>
     <string name="stedelijkText">Είναι Μουσείο μοντέρνας τέχνης.</string>
-
-    <string name="title_activity_detailed_with_title">DetailedWithTitleActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-
+    <string name="centralStationText">Ο κεντρικός σταθμός του Άμστερνταμ είναι ο μεγαλύτερος σιδηροδρομικός σταθμός στο Άμστερνταμ, στη Βόρεια Ολλανδία, στην Ολλανδία.</string>
+    <string name="museumRembrandText">Η Οικία – Μουσείο Ρέμπραντ (ολλαν. Museum het Rembrandthuis). Εδώ έζησε ο διάσημος Ολλανδός ζωγράφος και χαράκτης Ρέμπραντ Χάρμενσζον φαν Ράιν (Rembrandt Harmenszoon van Rijn, 1606 – 1669). \nΤο Σπίτι του Ρέμπραντ αγοράστηκε από το Δήμο του Άμστερνταμ το 1906. Ακολούθησε ριζική ανακαίνιση του κτηρίου από τον αρχιτέκτονα K.P.C. de Basel (1869 – 1923), που ολοκληρώθηκε το 1911, οπότε και εγκαινιάστηκε στις 10 Ιουνίου 1911 ως Μουσείο Ρέμπραντ από τη βασίλισσα της Ολλανδίας Βιλελμίνη (Wilhelmina).\nΣτο Μουσείο διατηρούνται το Εργαστήριο (studio) του Ρέμπραντ, όπου ζωγράφισε τα αριστουργηματικά έργα τέχνης του από το 1639 μέχρι το 1658, η Αίθουσα με τις πλούσιες συλλογές αντικειμένων τέχνης (objects of art), τα οποία χρησιμοποιούσε συχνά στους πίνακές του, η Αίθουσα με έργα ζωγράφων που εργάζονταν στο Άμστερνταμ πριν από την εποχή του και που ήταν γνωστοί ως \"προ-ρεμπρανιστές\" (pre-Rembrandtists), καθώς και η Κουζίνα του σπιτιού με τα σκεύη μαγειρικής και το θολωτό κρεβάτι της υπηρέτριας.\nΤο Μουσείο φημίζεται κυρίως για τα 290 περίπου χαρακτικά (eaux-fortes) του Ρέμπραντ. Ανάμεσα σε αυτά είναι \"Αυτοπροσωπογραφία δίπλα στο παράθυρο" (1648), \"Αυτοπροσωπογραφία με έκπληκτα μάτια\" (1630), "Αυτοπροσωπογραφία με τη Σάσκια" (1636), \"Αυτοπροσωπογραφία ακουμπισμένος σε τοίχο\" (1639), \" Η μητέρα του Ρέμπραντ\" (1633), "Η Σάσκια με πέρλες στα μαλλιά" (1634), "Γιαν Σιξ" (1647), "Οικογένεια ζητιάνων στην πόρτα ενός σπιτιού" (1648), "Ζητιάνος με ξύλινο πόδι" (περ. 1630), "Άνδρας που ουρεί" (1631), "Γυναίκα που ουρεί" (1631), "Τα τρία δέντρα" (1643), "Άποψη του Omual\" (1645), \"Δίας και Αντιόπη\" (1659), \"Γυναίκα γυμνή\" (περ. 1631), \"Η Πτώση\" (1638), "Οι τρεις σταυροί" (1653), "Μισόγυμνη γυναίκα καθισμένη πλάι σε θερμάστρα" (1658) και άλλα.\n   Οι αίθουσες του μουσείου διακοσμούνται ακόμη με πίνακες του Πίτερ Λάστμαν (Pieter Lastman, 1583 - 1633), δασκάλου του Ρέμπραντ, όπως \"Η Σταύρωση\" (1616) και \"Ο θρήνος για τον Άβελ\" (1623), καθώς και με τον πίνακα \"Ο αναστημένος Χριστός εμφανιζόμενος στη Μαρία Μαγδαληνή\" (1638) του Φέρντιναντ Μπολ (Ferdinand Bol, 1616 - 1680), μαθητή του Ρέμπραντ.</string>
+    <string name="vondelparkText">The Vondelpark is a public urban park of 47 hectares (120 acres) in Amsterdam, Netherlands. It is part of the borough of Amsterdam-Zuid and situated west from the Leidseplein and the Museumplein. The park was opened in 1865 and originally named Nieuwe Park (English: New Park), but later renamed Vondelpark, after the 17th-century playwright and poet Joost van den Vondel. The park has around 10 million visitors annually. Within the park is an open-air theatre, a playground and several food service facilities.
+        \n\nStatus\nThere are some statues in the park:\n - Joost van den Vondel (1867) by Louis Royer\n - The Fish (1965) by Pablo Picasso\n - Mama Baranka (1985) by Nelson Carrilho
+        \n\nEvents\nEvery Friday there is the Fridaynightskate that starts in front of the Filmmuseum.\nYearly events include the golf tournament Vondelpark Open and the running contest Vondelparkloop.\nThe King\'s Day celebrations on 27 April in the Vondelpark focus specifically on children. There is a "freemarket" (Dutch: vrijmarkt) and there are games and other activities for children.\nFrom June until August there are music and dance performances in the open-air theatre.\nSince 2011 on the evening of All Soul\'s Day people gather and float many small "remembrance" boats with a lighted candle in the big pond to remember those who have died in the last year(s)
+    </string>
+    <string name="adamLookoutText">Έχει ωραία θέα και κούνια σε ύψος 100 μέτρα. Η απλή είσοδος κοστίζει 16,5 ευρώ, είσοδος και δύο ποτά έχει 20,5 ευρώ, είσοδος και φαγητό και ποτό έχει 32 ευρώ (το φαγητό δεν έχει πολύ καλές κριτικές), η κούνια κοστίζει 6 ευρώ. Επίσης σε βγάζουν φωτογραφεία που περιλαμβάνεται στην τιμή</string>
+    <string name="jordaanText">Τα στενά κανάλια και οι δρόμοι της μοντέρνας συνοικίας Γιορντάαν πλαισιώνονται από indie μπουτίκ, φιλόξενες παμπ και μοδάτα εστιατόρια. Πάγκοι στην αγορά της πλατείας Noordermarkt προσφέρουν κοσμήματα, ρούχα, αντίκες και βιολογικά τρόφιμα. Στο Antiekcentrum Amsterdam πωλούνται vintage κεραμικά είδη και πίνακες ζωγραφικής, ενώ μικρότερες γκαλερί της περιοχής αναδεικνύουν καινοτόμα, σύγχρονα έργα τέχνης. Άλλα αξιοθέατα είναι το Houseboat Museum και το Amsterdam Cheese Museum.</string>
+    <string name="museumQuarterText">Μεγάλη πλατεία με πολύ σημαντικά μουσεία γύρω, γρασίδι και καντίνες για καφέ ή σνακ. Το χειμώνα η λίμνη μετατρέπεται σε παγοδρόμιο.</string>
+    <string name="damSquareText">Η πλατεία Dam, ένα από τα must αξιοθέατα στο Άμστερνταμ, είναι το κέντρο και η καρδιά του Άμστερνταμ, αν και υπάρχουν αναμφισβήτητα πιο ωραίες περιοχές στην πόλη. Σαν ιστορική περιοχή εντούτοις, είναι συναρπαστικό και αξίζει το χρόνο να το δείτε. Η πλατεία Dam έχει δει πολλά ιστορικά δράματα να ξετυλίγονται κατά τη διάρκεια των ετών, και ήταν παραδείγματος χάριν, η περιοχή υποδοχής για τον Napoleon και τα στρατεύματά του κατά τη διάρκεια της κατάληψης της πόλης το 1808. Η εντυπωσιακή ιστορία της πλατείας είναι καλά τεκμηριωμένη στο Ιστορικό μουσείο του Άμστερνταμ.\nΣταματήστε στην πλατεία για να ρίξετε μια ματιά στις ενέργειες που γίνονται εκεί. Διαδηλώσεις, διαμαρτυρίες, θρησκευτικές εκδηλώσεις, όλα ξεκινούν από εκεί και δίνουν χαρακτήρα στην πόλη. Εκεί βρίσκεται το παλάτι, η γοτθική νέα εκκλησία, πολυκαταστήματα, το μουσείο της Madame Tussauds κ.λπ. Όταν φτιάχτηκε η πλατεία την χρησιμοποιούσαν ως φράγμα (αυτό σημαίνει και το όνομά της). Φτιάχτηκε το 1270 και ένωνε τις δύο μεριές του ποταμού. </string>
+    <string name="royalPalaceText">Το Βασιλικό Παλάτι του Άμστερνταμ είναι ένα από τα τρία ανάκτορα στις Κάτω Χώρες που βρίσκονται στη διάθεση του μονάρχη με νόμο του Κοινοβουλίου. Βρίσκεται στη δυτική πλευρά της πλατείας Dam, απέναντι από το μνημείο πολέμου και δίπλα στο Nieuwe Kerk.</string>
+    <string name="oudeKerkText">Αυτή η παλαιά εκκλησία με τα μικρά σπίτια που προσκολλώνται στις πλευρές της, παραμένει ένα ήρεμο σημείο στην καρδιά της ξέφρενης περιοχής με τα Κόκκινα Φανάρια. Τα κτήρια της, ειδικά το οκτάγωνο κωδωνοστάσιο με ύφος γοτθικό-αναγεννησιακό χρησιμοποιήθηκε από τους ναυτικούς για να πάρουν τα ρουλεμάν τους. Είναι το παλαιότερο κτίριο του Άμστερνταμ. ιδρύθηκε περίπου το 1213. Από το 1578 μέχρι και σήμερα παραμένει μια Καλβινιστική εκκλησία.</string>
+    <string name="westerkerkText">Η Δυτική Εκκλησία του Άμστερνταμ (Westerkerk), γνωστή ως η θέση του γάμου της πρώην Βασίλισσας Beatrix το 1966, είναι η πιο δημοφιλής εκκλησία της πόλης. Ολοκληρώθηκε το 1630, αυτή η αναγεννησιακή εκκλησία είναι ασυνήθιστη λόγω των πολλών εσωτερικών και εξωτερικών της γοτθικών χαρακτηριστικών. Ο πύργος των 85 μέτρων, γνωστός ως "Langer Jan" (ψηλός Ιωάννης), είναι ο ψηλότερος στην πόλη και στην κορυφή του κορμού του είναι ένα μεγάλο αντίγραφο του στέμματος του αυτοκράτορα, το οποίο τοποθετήθηκε εκεί στη μνήμη του αυτοκράτορα Maximilian της Αυστρίας ο οποίος, το 1489, θεραπεύθηκε από ασθένεια στο Άμστερνταμ και έδωσε στην πόλη την προστασία του και το δικαίωμα να συμπεριλάβει το στέμμα του στο όπλα του. Μέσα στον πύργο, ένα σκαθάρι διακηρύσσει τις ώρες, το σφυρί του ζυγίζει ένα εντυπωσιακό 200 κιλά, ενώ το μεγαλύτερο από τα 48 κουδούνια του ζυγίζει περίπου τρεις και ένα τέταρτο τόνους. Άλλα αξιοθέατα περιλαμβάνουν ένα ωραίο όργανο που χρονολογείται από το 1622, μαζί με μια ενδιαφέρουσα μαρμάρινη στήλη που τοποθετήθηκε εκεί το 1906 στη μνήμη του Rembrandt, ο οποίος ήταν θαμμένος έξω από την εκκλησία (αργότερα επανεμφανίστηκε μέσα στην εκκλησία).</string>
+    <string name="kalverstraatText">Είναι ένας πολυσύχναστος εμπορικός δρόμος που διασχίζει περίπου Βορρά-Νότο για περίπου 750 μέτρα, από την πλατεία Dam μέχρι την πλατεία Muntplein. Mε πολλές έξυπνες μπουτίκ, γκαλερί, αρωματοπωλείο, καφετέριες και εστιατόρια. Ενώ η συντριβή της ανθρωπότητας μπορεί να είναι λίγο εκφοβιστική (ειδικά το Σάββατο), είναι μια εμπειρία που δεν θα ξεχάσετε σύντομα. </string>
 
 </resources>
