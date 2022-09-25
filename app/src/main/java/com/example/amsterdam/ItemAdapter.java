@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
-    List<MainActivity.Item> dataSet = new ArrayList<MainActivity.Item>();
+    List<PlaceItem> dataSet = new ArrayList<PlaceItem>();
 
     Activity activity;
 
@@ -93,7 +93,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         return dataSet.size();
     }
 
-    public void updateAdapter(List<MainActivity.Item> newList){
+    public void updateAdapter(List<PlaceItem> newList){
         dataSet.clear();
         dataSet.addAll(newList);
 

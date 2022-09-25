@@ -7,7 +7,6 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,6 +25,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         Palace,
         Churches,
         Parks,
+        Brunch,
         Food,
         Drink,
         Shopping,
@@ -50,7 +50,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         PlaceAdapter adapter = new PlaceAdapter(this);
         recyclerView.setAdapter(adapter);
 
-        List<MainActivity.Item> items = new ArrayList<>();
+        List<PlaceItem> items = new ArrayList<>();
 
         GeneralPlaces place = (GeneralPlaces) getIntent().getExtras().get("place");
 
@@ -62,10 +62,10 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 text = getResources().getString(R.string.museumsText);
                 titleToolbarText = "Μουσεία";
 
-                items.add(new MainActivity.Item(getResources().getString(R.string.rijksmuseum), ResourcesCompat.getDrawable(getResources(), R.drawable.rijksmuseum, null), null, DetailedActivity.Places.Rijksmuseum));
-                items.add(new MainActivity.Item(getResources().getString(R.string.vangogh), ResourcesCompat.getDrawable(getResources(), R.drawable.vangogh, null), null, DetailedActivity.Places.VanGogh));
-                items.add(new MainActivity.Item(getResources().getString(R.string.stedelijk), ResourcesCompat.getDrawable(getResources(), R.drawable.stedelijk , null), null, DetailedActivity.Places.Stedelijk));
-                items.add(new MainActivity.Item(getResources().getString(R.string.museumRembrand), ResourcesCompat.getDrawable(getResources(), R.drawable.museum_rembrand , null), null, DetailedActivity.Places.MuseumRembrand));
+                items.add(new PlaceItem(this, R.string.rijksmuseum, R.drawable.rijksmuseum, null, DetailedActivity.Places.Rijksmuseum));
+                items.add(new PlaceItem(this, R.string.vangogh, R.drawable.vangogh, null, DetailedActivity.Places.VanGogh));
+                items.add(new PlaceItem(this, R.string.stedelijk, R.drawable.stedelijk, null, DetailedActivity.Places.Stedelijk));
+                items.add(new PlaceItem(this, R.string.museumRembrand, R.drawable.museum_rembrand, null, DetailedActivity.Places.MuseumRembrand));
 
                 textForMaps = "museums";
 
@@ -75,7 +75,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 text = getResources().getString(R.string.palaceText);
                 titleToolbarText = "Βασιλεία";
 
-                items.add(new MainActivity.Item(getResources().getString(R.string.royalPalace), ResourcesCompat.getDrawable(getResources(), R.drawable.palace , null), null, DetailedActivity.Places.RoyalPalace));
+                items.add(new PlaceItem(this, R.string.royalPalace, R.drawable.palace, null, DetailedActivity.Places.RoyalPalace));
 
                 //textForMaps = "museums";
 
@@ -87,8 +87,8 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
                 textForMaps = "churches";
 
-                items.add(new MainActivity.Item(getResources().getString(R.string.oudeKerk), ResourcesCompat.getDrawable(getResources(), R.drawable.oude_kerk , null), null, DetailedActivity.Places.OudeKerk));
-                items.add(new MainActivity.Item(getResources().getString(R.string.westerkerk), ResourcesCompat.getDrawable(getResources(), R.drawable.westerkerk , null), null, DetailedActivity.Places.Westerkerk));
+                items.add(new PlaceItem(this, R.string.oudeKerk, R.drawable.oude_kerk, null, DetailedActivity.Places.OudeKerk));
+                items.add(new PlaceItem(this, R.string.westerkerk, R.drawable.westerkerk, null, DetailedActivity.Places.Westerkerk));
 
                 break;
 
@@ -98,7 +98,26 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
                 textForMaps = "parks";
 
-                items.add(new MainActivity.Item(getResources().getString(R.string.vondelpark), ResourcesCompat.getDrawable(getResources(), R.drawable.vondelpark , null), null, DetailedActivity.Places.VondelPark));
+                items.add(new PlaceItem(this, R.string.vondelpark, R.drawable.vondelpark, null, DetailedActivity.Places.VondelPark));
+
+                break;
+
+            case Brunch:
+                //text = getResources().getString(R.string.parksText);
+                titleToolbarText = "Brunch";
+
+                textForMaps = "brunch";
+
+                items.add(new PlaceItem(this, R.string.pluk, R.drawable.pluk, null, DetailedActivity.Places.Pluk));
+                items.add(new PlaceItem(this, R.string.omelegg, R.drawable.omelegg, null, DetailedActivity.Places.Omelegg));
+                items.add(new PlaceItem(this, R.string.breakfastClub, R.drawable.breakfast_club, null, DetailedActivity.Places.BreakfastClub));
+                items.add(new PlaceItem(this, R.string.bakersAndRoasters, R.drawable.bakers_roasters, null, DetailedActivity.Places.BakersRoasters));
+                items.add(new PlaceItem(this, R.string.greenwoods, R.drawable.greenwoods, null, DetailedActivity.Places.Greenwoods));
+                items.add(new PlaceItem(this, R.string.staringAtJacob, R.drawable.staring_at_jacob, null, DetailedActivity.Places.StaringAtJacob));
+                items.add(new PlaceItem(this, R.string.pancakeBakery, R.drawable.pancake_bakery, null, DetailedActivity.Places.PancakeBakery));
+                items.add(new PlaceItem(this, R.string.scandinavianEmbassy, R.drawable.scandinavian_embassy7, null, DetailedActivity.Places.ScandinavianEmbassy));
+                items.add(new PlaceItem(this, R.string.littleCoins, R.drawable.little_coins, null, DetailedActivity.Places.LittleCoins));
+                items.add(new PlaceItem(this, R.string.bakhuysAmsterdam, R.drawable.bakhuys_amsterdam, null, DetailedActivity.Places.BakhuysAmsterdam));
 
                 break;
 
@@ -124,7 +143,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 text = getResources().getString(R.string.shoppingText);
                 titleToolbarText = "Ψώνια";
 
-                items.add(new MainActivity.Item(getResources().getString(R.string.kalverstraat), ResourcesCompat.getDrawable(getResources(), R.drawable.kalverstraat , null), null, DetailedActivity.Places.Kalvestraat));
+                items.add(new PlaceItem(this, R.string.kalverstraat, R.drawable.kalverstraat, null, DetailedActivity.Places.Kalvestraat));
 
 //                textForMaps = "museums";
 
@@ -135,8 +154,8 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 text = "";//getResources().getString(R.string.shoppingText);
                 titleToolbarText = "Άλλα";
 
-                items.add(new MainActivity.Item(getResources().getString(R.string.centralStation), ResourcesCompat.getDrawable(getResources(), R.drawable.centraal_station , null), null, DetailedActivity.Places.CentralStation));
-                items.add(new MainActivity.Item(getResources().getString(R.string.adamLookout), ResourcesCompat.getDrawable(getResources(), R.drawable.adam_lookout , null), null, DetailedActivity.Places.AdamLookout));
+                items.add(new PlaceItem(this, R.string.centralStation, R.drawable.centraal_station, null, DetailedActivity.Places.CentralStation));
+                items.add(new PlaceItem(this, R.string.adamLookout, R.drawable.adam_lookout, null, DetailedActivity.Places.AdamLookout));
 
                 //textForMaps = "museums";
 
@@ -147,11 +166,11 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 text = "";//getResources().getString(R.string.shoppingText);
                 titleToolbarText = "Γειτονιές";
 
-                items.add(new MainActivity.Item(getResources().getString(R.string.jordaan), ResourcesCompat.getDrawable(getResources(), R.drawable.jordaan , null), null, DetailedActivity.Places.Jordaan));
-                items.add(new MainActivity.Item(getResources().getString(R.string.museumQuarter), ResourcesCompat.getDrawable(getResources(), R.drawable.museum_quarter , null), null, DetailedActivity.Places.MuseumQuarter));
-                items.add(new MainActivity.Item(getResources().getString(R.string.damSquare), ResourcesCompat.getDrawable(getResources(), R.drawable.dam_square , null), null, DetailedActivity.Places.DamSquare));
+                items.add(new PlaceItem(this, R.string.jordaan, R.drawable.jordaan, null, DetailedActivity.Places.Jordaan));
+                items.add(new PlaceItem(this, R.string.museumQuarter, R.drawable.museum_quarter, null, DetailedActivity.Places.MuseumQuarter));
+                items.add(new PlaceItem(this, R.string.damSquare, R.drawable.dam_square, null, DetailedActivity.Places.DamSquare));
 
-                //textForMaps = "museums";
+                //textForMaps = ;
 
                 break;
         }

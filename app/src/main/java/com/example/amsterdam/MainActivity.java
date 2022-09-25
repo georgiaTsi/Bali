@@ -12,17 +12,13 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    List<Item> allItemsList = new ArrayList<Item>();
+    List<PlaceItem> allItemsList = new ArrayList<PlaceItem>();
 
     RecyclerView recyclerView;
     ItemAdapter itemAdapter;
@@ -67,31 +63,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void populateList(){
-        //All
-        allItemsList.add(new Item(getResources().getString(R.string.museums), ResourcesCompat.getDrawable(getResources(), R.drawable.rijksmuseum, null), DetailedWithTitleActivity.GeneralPlaces.Museums, null));
-        allItemsList.add(new Item(getResources().getString(R.string.palace), ResourcesCompat.getDrawable(getResources(), R.drawable.palace, null), DetailedWithTitleActivity.GeneralPlaces.Palace, null));
-        allItemsList.add(new Item(getResources().getString(R.string.churches), ResourcesCompat.getDrawable(getResources(), R.drawable.oude_kerk, null), DetailedWithTitleActivity.GeneralPlaces.Churches, null));
-        allItemsList.add(new Item(getResources().getString(R.string.parks), ResourcesCompat.getDrawable(getResources(), R.drawable.vondelpark, null), DetailedWithTitleActivity.GeneralPlaces.Parks, null));
-        allItemsList.add(new Item(getResources().getString(R.string.food), ResourcesCompat.getDrawable(getResources(), R.drawable.amsterdam, null), DetailedWithTitleActivity.GeneralPlaces.Food, null));
-        allItemsList.add(new Item(getResources().getString(R.string.drink), ResourcesCompat.getDrawable(getResources(), R.drawable.amsterdam, null), DetailedWithTitleActivity.GeneralPlaces.Drink, null));
-        allItemsList.add(new Item(getResources().getString(R.string.other), ResourcesCompat.getDrawable(getResources(), R.drawable.adam_lookout, null), DetailedWithTitleActivity.GeneralPlaces.Other, null));
-        allItemsList.add(new Item(getResources().getString(R.string.neighborhood), ResourcesCompat.getDrawable(getResources(), R.drawable.jordaan, null), DetailedWithTitleActivity.GeneralPlaces.Neighborhood, null));
-        allItemsList.add(new Item(getResources().getString(R.string.shopping), ResourcesCompat.getDrawable(getResources(), R.drawable.kalverstraat, null), DetailedWithTitleActivity.GeneralPlaces.Shopping, null));
+        allItemsList.add(new PlaceItem(this, R.string.museums, R.drawable.rijksmuseum, DetailedWithTitleActivity.GeneralPlaces.Museums, null));
+        allItemsList.add(new PlaceItem(this, R.string.palace, R.drawable.palace, DetailedWithTitleActivity.GeneralPlaces.Palace, null));
+        allItemsList.add(new PlaceItem(this, R.string.churches, R.drawable.oude_kerk, DetailedWithTitleActivity.GeneralPlaces.Churches, null));
+        allItemsList.add(new PlaceItem(this, R.string.parks, R.drawable.vondelpark, DetailedWithTitleActivity.GeneralPlaces.Parks, null));
+        allItemsList.add(new PlaceItem(this, R.string.brunch, R.drawable.pluk, DetailedWithTitleActivity.GeneralPlaces.Brunch, null));
+        allItemsList.add(new PlaceItem(this, R.string.food, R.drawable.amsterdam, DetailedWithTitleActivity.GeneralPlaces.Food, null));
+        allItemsList.add(new PlaceItem(this, R.string.drink, R.drawable.amsterdam, DetailedWithTitleActivity.GeneralPlaces.Drink, null));
+        allItemsList.add(new PlaceItem(this, R.string.other, R.drawable.adam_lookout, DetailedWithTitleActivity.GeneralPlaces.Other, null));
+        allItemsList.add(new PlaceItem(this, R.string.neighborhood, R.drawable.jordaan, DetailedWithTitleActivity.GeneralPlaces.Neighborhood, null));
+        allItemsList.add(new PlaceItem(this, R.string.shopping, R.drawable.kalverstraat, DetailedWithTitleActivity.GeneralPlaces.Shopping, null));
 
         itemAdapter.updateAdapter(allItemsList);
-    }
-
-    public static class Item {
-        public String title;
-        public Drawable image;
-        public DetailedWithTitleActivity.GeneralPlaces generalPlace;
-        public DetailedActivity.Places place;
-
-        public Item(String title, Drawable image, DetailedWithTitleActivity.GeneralPlaces generalPlace, DetailedActivity.Places place){
-            this.title = title;
-            this.image = image;
-            this.generalPlace = generalPlace;
-            this.place = place;
-        }
     }
 }

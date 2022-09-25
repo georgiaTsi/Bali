@@ -31,7 +31,17 @@ public class DetailedActivity extends AppCompatActivity {
         RoyalPalace,
         OudeKerk,
         Westerkerk,
-        Kalvestraat
+        Kalvestraat,
+        Pluk,
+        Omelegg,
+        BreakfastClub,
+        BakersRoasters,
+        Greenwoods,
+        StaringAtJacob,
+        PancakeBakery,
+        ScandinavianEmbassy,
+        LittleCoins,
+        BakhuysAmsterdam,
     };
 
     String location = "";
@@ -183,6 +193,86 @@ public class DetailedActivity extends AppCompatActivity {
                 text = getResources().getString(R.string.kalverstraatText);
 
                 location = "52.370872947612774, 4.891735207486195";
+                break;
+
+            case Pluk:
+                toolBarLayout.setTitle(getResources().getString(R.string.pluk));
+                toolBarLayout.setBackground(getDrawable(R.drawable.pluk));
+                text = getResources().getString(R.string.plukText);
+
+                location = "52.37040756456403, 4.883426779276959";
+                break;
+
+            case Omelegg:
+                toolBarLayout.setTitle(getResources().getString(R.string.omelegg));
+                toolBarLayout.setBackground(getDrawable(R.drawable.omelegg));
+                text = getResources().getString(R.string.omeleggText);
+
+                location = "52.351871594244095, 4.89152194251497";
+                break;
+
+            case BakersRoasters:
+                toolBarLayout.setTitle(getResources().getString(R.string.bakersAndRoasters));
+                toolBarLayout.setBackground(getDrawable(R.drawable.bakers_roasters));
+                text = getResources().getString(R.string.bakersAndRoastersTest);
+
+                location = "52.35747836439564, 4.889934115532199";
+                break;
+
+            case Greenwoods:
+                toolBarLayout.setTitle(getResources().getString(R.string.greenwoods));
+                toolBarLayout.setBackground(getDrawable(R.drawable.greenwoods));
+                text = getResources().getString(R.string.greenwoodsText);
+
+                location = "52.37792379105342, 4.891379218339655";
+                break;
+
+            case BreakfastClub:
+                toolBarLayout.setTitle(getResources().getString(R.string.breakfastClub));
+                toolBarLayout.setBackground(getDrawable(R.drawable.breakfast_club));
+                text = getResources().getString(R.string.breakfastClubText);
+
+                location = "52.35872221820171, 4.909746935629784";
+                break;
+
+            case StaringAtJacob:
+                toolBarLayout.setTitle(getResources().getString(R.string.staringAtJacob));
+                toolBarLayout.setBackground(getDrawable(R.drawable.staring_at_jacob));
+                text = getResources().getString(R.string.staringAtJacobText);
+
+                location = "52.36244756605894, 4.861836369375937";
+                break;
+
+            case PancakeBakery:
+                toolBarLayout.setTitle(getResources().getString(R.string.pancakeBakery));
+                toolBarLayout.setBackground(getDrawable(R.drawable.pancake_bakery));
+                text = getResources().getString(R.string.pancakeBakeryText);
+
+                location = "52.37773145381351, 4.886213527180256";
+                break;
+
+            case ScandinavianEmbassy:
+                toolBarLayout.setTitle(getResources().getString(R.string.scandinavianEmbassy));
+                toolBarLayout.setBackground(getDrawable(R.drawable.scandinavian_embassy7));
+                text = getResources().getString(R.string.scandinavianEmpassyText);
+
+                location = "52.35566093955727, 4.8952074384768";
+                break;
+
+            case LittleCoins:
+                toolBarLayout.setTitle(getResources().getString(R.string.littleCoins));
+                toolBarLayout.setBackground(getDrawable(R.drawable.little_coins));
+                text = getResources().getString(R.string.littleCoinsText);
+
+                location = "52.35909871751138, 4.89822396024936";
+                break;
+
+            case BakhuysAmsterdam:
+                toolBarLayout.setTitle(getResources().getString(R.string.bakhuysAmsterdam));
+                toolBarLayout.setBackground(getDrawable(R.drawable.bakhuys_amsterdam));
+                text = getResources().getString(R.string.bakhuysAmsterdamText);
+
+                location = "52.36125928997446, 4.906967888358872";
                 break;
         }
 
