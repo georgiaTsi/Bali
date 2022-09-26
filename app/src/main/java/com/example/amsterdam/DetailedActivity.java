@@ -42,6 +42,9 @@ public class DetailedActivity extends AppCompatActivity {
         ScandinavianEmbassy,
         LittleCoins,
         BakhuysAmsterdam,
+        VanStapele,
+        Nemo,
+        NineStreets,
     };
 
     String location = "";
@@ -273,6 +276,30 @@ public class DetailedActivity extends AppCompatActivity {
                 text = getResources().getString(R.string.bakhuysAmsterdamText);
 
                 location = "52.36125928997446, 4.906967888358872";
+                break;
+
+            case VanStapele:
+                toolBarLayout.setTitle(getResources().getString(R.string.vanStapele));
+                toolBarLayout.setBackground(getDrawable(R.drawable.van_stapele));
+                text = getResources().getString(R.string.vanStapeleText);
+
+                location = "52.36899556588311, 4.888519644195818";
+                break;
+
+            case Nemo:
+                toolBarLayout.setTitle(getResources().getString(R.string.nemoRooftop));
+                toolBarLayout.setBackground(getDrawable(R.drawable.nemo));
+                text = getResources().getString(R.string.nemoRooftopText);
+
+                location = "52.37390978001664, 4.912381413717868";
+                break;
+
+            case NineStreets:
+                toolBarLayout.setTitle(getResources().getString(R.string.nineStreets));
+                toolBarLayout.setBackground(getDrawable(R.drawable.nine_streets));
+                text = getResources().getString(R.string.nineStreetsText);
+
+                location = "52.36907019770731, 4.883229427209277";
                 break;
         }
 

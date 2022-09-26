@@ -27,6 +27,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         Parks,
         Brunch,
         Food,
+        Dessert,
         Drink,
         Shopping,
         Other,
@@ -129,6 +130,16 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
                 break;
 
+            case Dessert:
+
+                titleToolbarText = "Γλυκά";
+
+                textForMaps = "dessert";
+
+                items.add(new PlaceItem(this, R.string.vanStapele, R.drawable.van_stapele, null, DetailedActivity.Places.VanStapele));
+
+                break;
+
             case Drink:
 
                 text = getResources().getString(R.string.drinkText);
@@ -144,6 +155,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 titleToolbarText = "Ψώνια";
 
                 items.add(new PlaceItem(this, R.string.kalverstraat, R.drawable.kalverstraat, null, DetailedActivity.Places.Kalvestraat));
+                items.add(new PlaceItem(this, R.string.nineStreets, R.drawable.nine_streets, null, DetailedActivity.Places.NineStreets));
 
 //                textForMaps = "museums";
 
@@ -151,13 +163,12 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
             case Other:
 
-                text = "";//getResources().getString(R.string.shoppingText);
+                text = "";
                 titleToolbarText = "Άλλα";
 
                 items.add(new PlaceItem(this, R.string.centralStation, R.drawable.centraal_station, null, DetailedActivity.Places.CentralStation));
                 items.add(new PlaceItem(this, R.string.adamLookout, R.drawable.adam_lookout, null, DetailedActivity.Places.AdamLookout));
-
-                //textForMaps = "museums";
+                items.add(new PlaceItem(this, R.string.nemoRooftop, R.drawable.nemo, null, DetailedActivity.Places.Nemo));
 
                 break;
 
