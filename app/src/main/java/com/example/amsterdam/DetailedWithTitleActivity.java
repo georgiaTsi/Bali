@@ -10,6 +10,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
@@ -31,7 +32,8 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         Drink,
         Shopping,
         Other,
-        Neighborhood
+        Neighborhood,
+        Language
     };
 
     String textForMaps = "";
@@ -156,8 +158,9 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
                 items.add(new PlaceItem(this, R.string.kalverstraat, R.drawable.kalverstraat, null, DetailedActivity.Places.Kalvestraat));
                 items.add(new PlaceItem(this, R.string.nineStreets, R.drawable.nine_streets, null, DetailedActivity.Places.NineStreets));
+                items.add(new PlaceItem(this, R.string.albertCuyp, R.drawable.albert_cuyp, null, DetailedActivity.Places.AlbertCuyp));
 
-//                textForMaps = "museums";
+                textForMaps = "markets";
 
                 break;
 
@@ -182,6 +185,13 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 items.add(new PlaceItem(this, R.string.damSquare, R.drawable.dam_square, null, DetailedActivity.Places.DamSquare));
 
                 //textForMaps = ;
+
+                break;
+
+            case Language:
+
+                text = getResources().getString(R.string.languageText);
+                titleToolbarText = getResources().getString(R.string.language);
 
                 break;
         }

@@ -45,6 +45,7 @@ public class DetailedActivity extends AppCompatActivity {
         VanStapele,
         Nemo,
         NineStreets,
+        AlbertCuyp,
     };
 
     String location = "";
@@ -300,6 +301,14 @@ public class DetailedActivity extends AppCompatActivity {
                 text = getResources().getString(R.string.nineStreetsText);
 
                 location = "52.36907019770731, 4.883229427209277";
+                break;
+
+            case AlbertCuyp:
+                toolBarLayout.setTitle(getResources().getString(R.string.albertCuyp));
+                toolBarLayout.setBackground(getDrawable(R.drawable.albert_cuyp));
+                text = getResources().getString(R.string.albertCuypText);
+
+                location = "52.356124543776325, 4.8953870982515095";
                 break;
         }
 

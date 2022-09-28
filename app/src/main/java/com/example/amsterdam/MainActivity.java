@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         allItemsList.add(new PlaceItem(this, R.string.other, R.drawable.adam_lookout, DetailedWithTitleActivity.GeneralPlaces.Other, null));
         allItemsList.add(new PlaceItem(this, R.string.neighborhood, R.drawable.jordaan, DetailedWithTitleActivity.GeneralPlaces.Neighborhood, null));
         allItemsList.add(new PlaceItem(this, R.string.shopping, R.drawable.kalverstraat, DetailedWithTitleActivity.GeneralPlaces.Shopping, null));
+        allItemsList.add(new PlaceItem(this, R.string.language, R.drawable.amsterdam, DetailedWithTitleActivity.GeneralPlaces.Language, null));
 
         itemAdapter.updateAdapter(allItemsList);
     }
