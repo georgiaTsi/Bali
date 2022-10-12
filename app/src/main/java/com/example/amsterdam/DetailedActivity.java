@@ -46,6 +46,7 @@ public class DetailedActivity extends AppCompatActivity {
         Nemo,
         NineStreets,
         AlbertCuyp,
+        XtraCold,
     };
 
     String location = "";
@@ -309,6 +310,14 @@ public class DetailedActivity extends AppCompatActivity {
                 text = getResources().getString(R.string.albertCuypText);
 
                 location = "52.356124543776325, 4.8953870982515095";
+                break;
+
+            case XtraCold:
+                toolBarLayout.setTitle(getResources().getString(R.string.xtracoldIcebar));
+                toolBarLayout.setBackground(getDrawable(R.drawable.xtracold));
+                text = getResources().getString(R.string.xtracoldIcebarText);
+
+                location = "52.36660895534379, 4.90007864243961";
                 break;
         }
 

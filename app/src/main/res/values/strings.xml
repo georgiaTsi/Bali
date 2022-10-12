@@ -47,6 +47,7 @@
     <string name="nemoRooftop">Roof at NEMO</string>
     <string name="nineStreets">De 9 Straatjes (The 9 Streets)</string>
     <string name="language">Φράσεις</string>
+    <string name="xtracoldIcebar">Xtracold Icebar</string>
 
     <!--Texts-->
     <string name="museumsText">
@@ -197,6 +198,8 @@
         Ja: ναι\nΓια\n\n
         Nee: όχι\nΝέι: το ολλανδικό όχι προφέρεται ως «νέι» και ενίοτε εν τη ρύμη του λόγου ακούγεται ως «νε», γεγονός το οποίο μπορεί να ξενίσει τους ελληνόφωνους.\n\n
     </string>
-<!--    <string name=""></string>-->
+    <string name="xtracoldIcebarText">Μπαίνεις πρώτα σε έναν χώρο όπου πίνεις ένα ποτό και μετά από λίγη ώρα περνάς στο παγωμένο bar όπου έχει πραγματικά πολύ κρύο κ απολαμβλάνεις ξανά 2 παγωμένα ποτά. Τα ποτά σου τα σερβίρουν σε ποτήρια από πάγο.\n\n
+    Καλή ενδυμασία σίγουρα γιατί έχει - 9.4°C   οπότε χοντρά ρουχαλάκια.\n\n
+    Very unique experience in Amsterdam. You need to book your place in advance on their website. It’s 26,50 euro for 1 person. You’ll receive three tokens you can use for drinks (included in the price). They have jackets and gloves you can use.</string>
 
 </resources>

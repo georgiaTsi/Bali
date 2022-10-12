@@ -147,7 +147,9 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 text = getResources().getString(R.string.drinkText);
                 titleToolbarText = "Ποτό";
 
-//                textForMaps = "museums";
+                items.add(new PlaceItem(this, R.string.xtracoldIcebar, R.drawable.xtracold, null, DetailedActivity.Places.XtraCold));
+
+                textForMaps = "drink";
 
                 break;
 

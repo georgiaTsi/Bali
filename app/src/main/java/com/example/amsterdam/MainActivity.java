@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         allItemsList.add(new PlaceItem(this, R.string.brunch, R.drawable.pluk, DetailedWithTitleActivity.GeneralPlaces.Brunch, null));
         allItemsList.add(new PlaceItem(this, R.string.food, R.drawable.amsterdam, DetailedWithTitleActivity.GeneralPlaces.Food, null));
         allItemsList.add(new PlaceItem(this, R.string.dessert, R.drawable.van_stapele, DetailedWithTitleActivity.GeneralPlaces.Dessert, null));
-        allItemsList.add(new PlaceItem(this, R.string.drink, R.drawable.amsterdam, DetailedWithTitleActivity.GeneralPlaces.Drink, null));
+        allItemsList.add(new PlaceItem(this, R.string.drink, R.drawable.xtracold, DetailedWithTitleActivity.GeneralPlaces.Drink, null));
         allItemsList.add(new PlaceItem(this, R.string.other, R.drawable.adam_lookout, DetailedWithTitleActivity.GeneralPlaces.Other, null));
         allItemsList.add(new PlaceItem(this, R.string.neighborhood, R.drawable.jordaan, DetailedWithTitleActivity.GeneralPlaces.Neighborhood, null));
         allItemsList.add(new PlaceItem(this, R.string.shopping, R.drawable.kalverstraat, DetailedWithTitleActivity.GeneralPlaces.Shopping, null));
