@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Amsterdam!</string>
+    <string name="app_name">Bali!</string>
 
     <string name="action_notes">Notes</string>
 
@@ -18,36 +18,8 @@
     <string name="other">Άλλο</string>
     <string name="shopping">Ψώνια</string>
     <string name="neighborhood">Γειτονιές</string>
-    <string name="rijksmuseum">Μουσείο Rijksmuseum (Ρέικσμουζεουμ)</string>
-    <string name="vangogh">Μουσείο Van Gogh</string>
-    <string name="stedelijk">Μουσείο Stedelijk </string>
-    <string name="centralStation">Amsterdam Centraal</string>
-    <string name="museumRembrand">Οικία - Μουσείο Ρέμπραντ</string>
-    <string name="vondelpark">Vondelpark</string>
-    <string name="adamLookout">A\'dam Lookout</string>
-    <string name="jordaan">Jordaan (Γιορντάαν)</string>
-    <string name="museumQuarter">Museum Quarter</string>
-    <string name="damSquare">Πλατεία Νταμ</string>
-    <string name="royalPalace">Βασιλικό Παλάτι</string>
-    <string name="oudeKerk">Εκκλησία Oude Kerk</string>
-    <string name="westerkerk">Εκκλησία Westerkerk</string>
-    <string name="kalverstraat">Λεωφόρος Kalverstraat (Κάλβερ)</string>
-    <string name="albertCuyp">Albert Cuyp Market</string>
-    <string name="pluk">Pluk</string>
-    <string name="omelegg">Omelegg</string>
-    <string name="breakfastClub">The Breakfast Club</string>
-    <string name="bakersAndRoasters">Bakers And Roasters</string>
-    <string name="greenwoods">Greenwoods</string>
-    <string name="staringAtJacob">Staring At Jacob</string>
-    <string name="pancakeBakery">Pancake Bakery</string>
-    <string name="scandinavianEmbassy">Scandinavian Embassy</string>
-    <string name="littleCoins">Little Coins</string>
-    <string name="bakhuysAmsterdam">Bakhuys Amsterdam</string>
-    <string name="vanStapele">Van Stapele Koekmakerij</string>
-    <string name="nemoRooftop">Roof at NEMO</string>
-    <string name="nineStreets">De 9 Straatjes (The 9 Streets)</string>
     <string name="language">Φράσεις</string>
-    <string name="xtracoldIcebar">Xtracold Icebar</string>
+    <string name="flights_info">Flights info</string>
 
     <!--Texts-->
     <string name="museumsText">
@@ -183,23 +155,33 @@
         Ο δρόμος και η αγορά πήραν το όνομα από τον Albert Cuyp, έναν ζωγράφο του 17ου αιώνα. \n\n
         Επίσης, η περιοχή De Pijp είναι ξακουστή για τα μαγαζιά της για brunch, όπως το Little Collins, το Bakers and Roasters και το Scandinavian Embassy.</string>
     <string name="languageText">
-        Hallo: γεια\nΧαλό: ελαφρύ χ· το h προφέρεται συνήθως ως ελαφρύ χ στα ολλανδικά (υπάρχουν και περιπτώσεις όπου δεν ακούγεται σχεδόν καθόλου)\n\n
-        Dag: γεια (σας/σου)\nΝταχ: έντονο χ· στην προφορά του έντονου χ υπάρχει μια διακύμανση μεταξύ των διαλέκτων. Ο ήχος χ των βόρειων Ολλανδών είναι πιο ισχυρός από αυτόν των νότιων.\nΒασικός τρόπος χαιρετισμού, χρησιμοποιείται και όταν βλέπουμε κάποιον και όταν αποχαιρετάμε κάποιον. Κυριολεκτικά σημαίνει «μέρα».\n\n
-        Hoi: γεια (χαρά)\nΧόι\nΑνεπίσημος τρόπος χαιρετισμού\n\n
-        Tot ziens: Εις το επανιδείν (επίσημο)\nΤοτ ζινς: το ie προφέρεται πάντα όπως το ι στα ελληνικά, αλλά ελαφρώς πιο μακρόσυρτο\n\n
-        Doei/Doeg: Τα λέμε (ανεπίσημο)\nΝτούι/Ντουχ: ο δίφθογγος oe προφέρεται όπως ο ελληνικός δίφθογγος ου.\n\n
-        Goedemorgen: Καλημέρα\nΧουντεμόρχε(ν): Ο χαιρετισμός αυτός ακούγεται και συχνά ως goeiemorgen (χουγεμόρχε(ν)), αν και η γραφή του έτσι θεωρείται λανθασμένη από πολλούς. Το τελικό ν λέξεων που καταλήγουν σε -en είθισται να είναι σιωπηλό.\n\n
-        Goedemiddag: Καλησπέρα\nΧουντεμίνταχ\n\n
-        Goedenavond: Καλησπέρα\nΧουντενάφοντ: το ολλανδικό v προφέρεται ως φ ή σαν κάτι μεταξύ φ και β.\n\n
-        Welterusten: Καληνύχτα\nΒελτερέστε(ν)\n\n
-        Bedankt: Ευχαριστώ (χωρίς να υποδηλώνεται η χρήση τύπου ευγενείας)\nΜπεντάνκτ\n\n
-        Dank je wel ή και Dankjewel: (σε) Ευχαριστώ\nΝτανκ γε βελ ή Ντάνκεβελ: το w προφέρεται ως β στα ολλανδικά.\n\n
-        Alstublieft: Παρακαλώ (ευγενείας) | Ορίστε (όταν κάποιος δίνει κάτι σε κάποιον)\nΆλστυμπλιφτ\n\n
-        Ja: ναι\nΓια\n\n
-        Nee: όχι\nΝέι: το ολλανδικό όχι προφέρεται ως «νέι» και ενίοτε εν τη ρύμη του λόγου ακούγεται ως «νε», γεγονός το οποίο μπορεί να ξενίσει τους ελληνόφωνους.\n\n
+        Μερικές βασικές λέξεις της γλώσσας Μπαχάσα:\n\n
+        selamat pagi (καλημέρα) \n\n
+        tolong (παρακαλώ) \n\n
+        terima kasih (ευχαριστώ)
     </string>
-    <string name="xtracoldIcebarText">Μπαίνεις πρώτα σε έναν χώρο όπου πίνεις ένα ποτό και μετά από λίγη ώρα περνάς στο παγωμένο bar όπου έχει πραγματικά πολύ κρύο κ απολαμβλάνεις ξανά 2 παγωμένα ποτά. Τα ποτά σου τα σερβίρουν σε ποτήρια από πάγο.\n\n
-    Καλή ενδυμασία σίγουρα γιατί έχει - 9.4°C   οπότε χοντρά ρουχαλάκια.\n\n
-    Very unique experience in Amsterdam. You need to book your place in advance on their website. It’s 26,50 euro for 1 person. You’ll receive three tokens you can use for drinks (included in the price). They have jackets and gloves you can use.</string>
+    <string name="flights_infoText">
+        Turkish Airlines\n
+        Αποσκευή 30 κιλών και χειραποσκευή 8 κιλών (55x40x23 cm)\n\n
+
+        Singapore Airlines\n
+        Αποσκευή 25 κιλών(length+width+height μέχρι 158 cm) και χειραποσκευή 7 κιλών(length+width+height μέχρι 115 cm)\n\n\n
+
+        9 Αυγούστου\n
+        Διάρκεια ταξιδιού 16 ώρες και 30 λεπτά\n
+        Αθήνα 21:45 -> Κωνσταντινούπολη 23:15, 1 ώρα και 30 λεπτά (ΤΚ1846)\n
+        2 ώρες και 35 λεπτά αναμονή\n
+        Κωνσταντινούπολη 01:50 -> Ντενπασάρ 19:15, 12 ώρες και 25 λεπτά (ΤΚ66)\n\n\n
+
+        21 Αυγούστου\n
+        Διάρκεια ταξιδιού 2 ώρες και 40 λεπτά\n
+
+        Ντενπασάρ 7:20 -> Σιγκαπούρη 10:00(SQ949)\n\n\n
+        25 Αυγούστου\n
+        Διάρκεια ταξιδιού 14 ώρες και 35 λεπτά\n
+        Σιγκαπούρη 10:40 -> Κωνσταντινούπολη 16:45, 11 ώρες και 5 λεπτά (ΤΚ209)\n
+        2 ώρες και 5 λεπτά αναμονή\n
+        Κωνσταντινούπολη 18:50 -> Αθήνα 20:15, 1 ώρα και 25 λεπτά (ΤΚ1845)
+    </string>
 
 </resources>

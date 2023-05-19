@@ -1,4 +1,4 @@
-package com.example.amsterdam;
+package com.example.bali;
 
 import org.junit.Test;
 

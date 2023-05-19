@@ -1,4 +1,4 @@
-package com.example.amsterdam;
+package com.example.bali;
 
 import android.view.View;
 import android.widget.ImageView;

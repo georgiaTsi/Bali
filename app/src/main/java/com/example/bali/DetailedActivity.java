@@ -1,4 +1,4 @@
-package com.example.amsterdam;
+package com.example.bali;
 
 import android.content.Context;
 import android.content.Intent;
@@ -88,7 +88,7 @@ public class DetailedActivity extends AppCompatActivity {
 
         switch (place){
 
-            case Rijksmuseum:
+            /*case Rijksmuseum:
                 toolBarLayout.setTitle(getResources().getString(R.string.rijksmuseum));
                 toolBarLayout.setBackground(getDrawable(R.drawable.rijksmuseum));
                 text = getResources().getString(R.string.rijksmuseumText);
@@ -318,7 +318,7 @@ public class DetailedActivity extends AppCompatActivity {
                 text = getResources().getString(R.string.xtracoldIcebarText);
 
                 location = "52.36660895534379, 4.90007864243961";
-                break;
+                break;*/
         }
 
         sharedPref = this.getPreferences(Context.MODE_PRIVATE);

@@ -1,4 +1,4 @@
-package com.example.amsterdam;
+package com.example.bali;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -33,7 +33,8 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         Shopping,
         Other,
         Neighborhood,
-        Language
+        Language,
+        FlightsInfo
     };
 
     String textForMaps = "";
@@ -65,16 +66,16 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 text = getResources().getString(R.string.museumsText);
                 titleToolbarText = "Μουσεία";
 
-                items.add(new PlaceItem(this, R.string.rijksmuseum, R.drawable.rijksmuseum, null, DetailedActivity.Places.Rijksmuseum));
-                items.add(new PlaceItem(this, R.string.vangogh, R.drawable.vangogh, null, DetailedActivity.Places.VanGogh));
-                items.add(new PlaceItem(this, R.string.stedelijk, R.drawable.stedelijk, null, DetailedActivity.Places.Stedelijk));
-                items.add(new PlaceItem(this, R.string.museumRembrand, R.drawable.museum_rembrand, null, DetailedActivity.Places.MuseumRembrand));
+//                items.add(new PlaceItem(this, R.string.rijksmuseum, R.drawable.rijksmuseum, null, DetailedActivity.Places.Rijksmuseum));
+//                items.add(new PlaceItem(this, R.string.vangogh, R.drawable.vangogh, null, DetailedActivity.Places.VanGogh));
+//                items.add(new PlaceItem(this, R.string.stedelijk, R.drawable.stedelijk, null, DetailedActivity.Places.Stedelijk));
+//                items.add(new PlaceItem(this, R.string.museumRembrand, R.drawable.museum_rembrand, null, DetailedActivity.Places.MuseumRembrand));
 
                 textForMaps = "museums";
 
                 break;
 
-            case Palace:
+            /*case Palace:
                 text = getResources().getString(R.string.palaceText);
                 titleToolbarText = "Βασιλεία";
 
@@ -188,12 +189,19 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
                 //textForMaps = ;
 
-                break;
+                break;*/
 
             case Language:
 
                 text = getResources().getString(R.string.languageText);
                 titleToolbarText = getResources().getString(R.string.language);
+
+                break;
+
+            case FlightsInfo:
+
+                text = getResources().getString(R.string.flights_infoText);
+                titleToolbarText = getResources().getString(R.string.flights_info);
 
                 break;
         }

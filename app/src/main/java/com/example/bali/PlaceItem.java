@@ -1,4 +1,4 @@
-package com.example.amsterdam;
+package com.example.bali;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
