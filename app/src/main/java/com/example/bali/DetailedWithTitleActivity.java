@@ -34,7 +34,9 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         Other,
         Neighborhood,
         Language,
-        FlightsInfo
+        FlightsInfo,
+        Hotels,
+        Checklist
     };
 
     String textForMaps = "";
@@ -75,17 +77,13 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
                 break;
 
-            /*case Palace:
-                text = getResources().getString(R.string.palaceText);
-                titleToolbarText = "Βασιλεία";
-
-                items.add(new PlaceItem(this, R.string.royalPalace, R.drawable.palace, null, DetailedActivity.Places.RoyalPalace));
-
-                //textForMaps = "museums";
+            case Hotels:
+                text = getResources().getString(R.string.hotelsText);
+                titleToolbarText = getResources().getString(R.string.hotels);
 
                 break;
 
-            case Churches:
+            /*case Churches:
                 text = getResources().getString(R.string.churchesText);
                 titleToolbarText = "Εκκλησίες";
 

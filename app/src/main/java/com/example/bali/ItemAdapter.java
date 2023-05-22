@@ -52,13 +52,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         viewHolder.imageView.setImageDrawable(dataSet.get(position).image);
         viewHolder.textView.setText(dataSet.get(position).title);
 
-        viewHolder.imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(activity.getBaseContext(), DetailedWithTitleActivity.class);
-                intent.putExtra("place", dataSet.get(position).generalPlace);
-                activity.startActivity(intent);
-            }
+        viewHolder.imageView.setOnClickListener(view -> {
+            Intent intent = new Intent(activity.getBaseContext(), DetailedWithTitleActivity.class);
+            intent.putExtra("place", dataSet.get(position).generalPlace);
+            activity.startActivity(intent);
         });
 
         //next
@@ -75,13 +72,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         viewHolder.imageView1.setImageDrawable(dataSet.get(position+1).image);
         viewHolder.textView1.setText(dataSet.get(position+1).title);
 
-        viewHolder.imageView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(activity.getBaseContext(), DetailedWithTitleActivity.class);
-                intent.putExtra("place", dataSet.get(position+1).generalPlace);
-                activity.startActivity(intent);
-            }
+        viewHolder.imageView1.setOnClickListener(view -> {
+            Intent intent = new Intent(activity.getBaseContext(), DetailedWithTitleActivity.class);
+            intent.putExtra("place", dataSet.get(position+1).generalPlace);
+            activity.startActivity(intent);
         });
     }
 

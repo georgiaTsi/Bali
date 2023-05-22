@@ -22,7 +22,7 @@
                 android:id="@+id/imageview_holder"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:scaleType="centerCrop"/>
+                android:scaleType="fitCenter"/>
             <TextView
                 android:id="@+id/textview_holder"
                 android:layout_width="match_parent"
@@ -46,7 +46,7 @@
                 android:id="@+id/imageview_holder1"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:scaleType="centerCrop"/>
+                android:scaleType="fitCenter"/>
             <TextView
                 android:id="@+id/textview_holder1"
                 android:layout_width="match_parent"

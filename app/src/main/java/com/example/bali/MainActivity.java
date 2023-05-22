@@ -18,10 +18,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    List<com.example.bali.PlaceItem> allItemsList = new ArrayList<com.example.bali.PlaceItem>();
+    List<PlaceItem> allItemsList = new ArrayList<>();
 
     RecyclerView recyclerView;
-    com.example.bali.ItemAdapter itemAdapter;
+    ItemAdapter itemAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void populateList(){
-        allItemsList.add(new PlaceItem(this, R.string.flights_info, R.drawable.rijksmuseum, DetailedWithTitleActivity.GeneralPlaces.FlightsInfo, null));
-//        allItemsList.add(new PlaceItem(this, R.string.palace, R.drawable.palace, DetailedWithTitleActivity.GeneralPlaces.Palace, null));
-//        allItemsList.add(new PlaceItem(this, R.string.churches, R.drawable.oude_kerk, DetailedWithTitleActivity.GeneralPlaces.Churches, null));
+        allItemsList.add(new PlaceItem(this, R.string.flights_info, R.drawable.icon_flight, DetailedWithTitleActivity.GeneralPlaces.FlightsInfo, null));
+        allItemsList.add(new PlaceItem(this, R.string.hotels, R.drawable.icon_hotel, DetailedWithTitleActivity.GeneralPlaces.Hotels, null));
+        allItemsList.add(new PlaceItem(this, R.string.checklist, R.drawable.icon_checklist, DetailedWithTitleActivity.GeneralPlaces.Checklist, null));
 //        allItemsList.add(new PlaceItem(this, R.string.parks, R.drawable.vondelpark, DetailedWithTitleActivity.GeneralPlaces.Parks, null));
 //        allItemsList.add(new PlaceItem(this, R.string.brunch, R.drawable.pluk, DetailedWithTitleActivity.GeneralPlaces.Brunch, null));
 //        allItemsList.add(new PlaceItem(this, R.string.food, R.drawable.amsterdam, DetailedWithTitleActivity.GeneralPlaces.Food, null));
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 //        allItemsList.add(new PlaceItem(this, R.string.other, R.drawable.adam_lookout, DetailedWithTitleActivity.GeneralPlaces.Other, null));
 //        allItemsList.add(new PlaceItem(this, R.string.neighborhood, R.drawable.jordaan, DetailedWithTitleActivity.GeneralPlaces.Neighborhood, null));
 //        allItemsList.add(new PlaceItem(this, R.string.shopping, R.drawable.kalverstraat, DetailedWithTitleActivity.GeneralPlaces.Shopping, null));
-        allItemsList.add(new PlaceItem(this, R.string.language, R.drawable.language, DetailedWithTitleActivity.GeneralPlaces.Language, null));
+        allItemsList.add(new PlaceItem(this, R.string.language, R.drawable.icon_language, DetailedWithTitleActivity.GeneralPlaces.Language, null));
 
         itemAdapter.updateAdapter(allItemsList);
     }

@@ -39,9 +39,12 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceViewHolder> {
         viewHolder.imageView.setImageDrawable(dataSet.get(position).image);
         viewHolder.textView.setText(dataSet.get(position).title);
 
-        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        viewHolder.itemView.setOnClickListener(view -> {
+            if(dataSet.get(position).place.equals(DetailedWithTitleActivity.GeneralPlaces.Checklist)){
+                Intent intent = new Intent(activity.getBaseContext(), ChecklistActivity.class);
+                activity.startActivity(intent);
+            }
+            else {
                 Intent intent = new Intent(activity.getBaseContext(), DetailedActivity.class);
                 intent.putExtra("place", dataSet.get(position).place);
                 activity.startActivity(intent);
