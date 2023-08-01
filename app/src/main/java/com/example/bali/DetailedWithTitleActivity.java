@@ -137,7 +137,9 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 titleToolbarText = "Αξιοθέατα";
 
                 items.add(new PlaceItem(this, R.string.monkey, R.drawable.monkey, null, DetailedActivity.Places.Monkey));
+                items.add(new PlaceItem(this, R.string.cekingRice, R.drawable.ceking_rice, null, DetailedActivity.Places.CekingRice));
                 items.add(new PlaceItem(this, R.string.tanahLot, R.drawable.tanah_lot, null, DetailedActivity.Places.TanahLot));
+                items.add(new PlaceItem(this, R.string.ulunDanu, R.drawable.ulun_danu, null, DetailedActivity.Places.UlunDanu));
 
                 isMapsButtonHidden = true;
 

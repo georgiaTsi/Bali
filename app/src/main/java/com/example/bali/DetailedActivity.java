@@ -22,7 +22,9 @@ public class DetailedActivity extends AppCompatActivity {
         ClearCafe,
         SimplySocial,
         Monkey,
-        TanahLot
+        TanahLot,
+        CekingRice,
+        UlunDanu
     };
 
     String location = "";
@@ -89,6 +91,22 @@ public class DetailedActivity extends AppCompatActivity {
                 textView.setText(getResources().getString(R.string.tanahLotText));
 
                 location = "-8.6209943633093, 115.08678166705218";
+
+                break;
+
+            case CekingRice:
+                labelTextView.setText(getResources().getString(R.string.cekingRice));
+                textView.setText(getResources().getString(R.string.cekingRiceText));
+
+                location = "-8.431546700458268, 115.27930836433387";
+
+                break;
+
+            case UlunDanu:
+                labelTextView.setText(getResources().getString(R.string.ulunDanu));
+                textView.setText(getResources().getString(R.string.ulunDanuText));
+
+                location = "-8.274894007970275, 115.16685556138685";
 
                 break;
         }

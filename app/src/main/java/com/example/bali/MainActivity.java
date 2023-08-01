@@ -37,7 +37,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         if(item.getTitle().equals("Info")){
 
-            Fragment newFragment = new InfoFragment();
+            Fragment newFragment = new InfoFragment(InfoFragment.Menu.Info);
+
+            transaction.replace(R.id.fragment_container_view, newFragment);
+        }
+        else if(item.getTitle().equals("Places")){
+
+            Fragment newFragment = new InfoFragment(InfoFragment.Menu.Places);
 
             transaction.replace(R.id.fragment_container_view, newFragment);
         }

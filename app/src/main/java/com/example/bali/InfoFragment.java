@@ -1,5 +1,6 @@
 package com.example.bali;
 
+import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,10 +15,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InfoFragment extends Fragment {
+    public enum Menu{
+        Info,
+        Places
+    }
+
+    Menu menu;
+
     List<PlaceItem> allItemsList = new ArrayList<>();
 
     RecyclerView recyclerView;
     ItemAdapter itemAdapter;
+
+    public InfoFragment(){
+        this.menu = Menu.Info;
+    }
+
+    public InfoFragment(Menu menu){
+        this.menu = menu;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,13 +56,16 @@ public class InfoFragment extends Fragment {
         populateList();
     }
 
-    private void populateList(){
-        allItemsList.add(new PlaceItem(getContext(), R.string.flights_info, R.drawable.icon_flight, DetailedWithTitleActivity.GeneralPlaces.FlightsInfo, null));
-        allItemsList.add(new PlaceItem(getContext(), R.string.hotels, R.drawable.icon_hotel, DetailedWithTitleActivity.GeneralPlaces.Hotels, null));
-        allItemsList.add(new PlaceItem(getContext(), R.string.checklist, R.drawable.icon_checklist, DetailedWithTitleActivity.GeneralPlaces.Checklist, null));
-        allItemsList.add(new PlaceItem(getContext(), R.string.language, R.drawable.icon_language, DetailedWithTitleActivity.GeneralPlaces.Language, null));
-        allItemsList.add(new PlaceItem(getContext(), R.string.food, R.drawable.restaurant, DetailedWithTitleActivity.GeneralPlaces.Restaurant, null));
-        allItemsList.add(new PlaceItem(getContext(), R.string.attraction, R.drawable.forest, DetailedWithTitleActivity.GeneralPlaces.Attraction, null));
+    private void populateList() {
+        if (menu.equals(Menu.Info)) {
+            allItemsList.add(new PlaceItem(getContext(), R.string.flights_info, R.drawable.icon_flight, DetailedWithTitleActivity.GeneralPlaces.FlightsInfo, null));
+            allItemsList.add(new PlaceItem(getContext(), R.string.hotels, R.drawable.icon_hotel, DetailedWithTitleActivity.GeneralPlaces.Hotels, null));
+            allItemsList.add(new PlaceItem(getContext(), R.string.checklist, R.drawable.icon_checklist, DetailedWithTitleActivity.GeneralPlaces.Checklist, null));
+            allItemsList.add(new PlaceItem(getContext(), R.string.language, R.drawable.icon_language, DetailedWithTitleActivity.GeneralPlaces.Language, null));
+        } else {
+            allItemsList.add(new PlaceItem(getContext(), R.string.food, R.drawable.restaurant, DetailedWithTitleActivity.GeneralPlaces.Restaurant, null));
+            allItemsList.add(new PlaceItem(getContext(), R.string.attraction, R.drawable.forest, DetailedWithTitleActivity.GeneralPlaces.Attraction, null));
+        }
 
         itemAdapter.updateAdapter(allItemsList);
     }
