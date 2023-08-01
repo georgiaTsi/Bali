@@ -17,11 +17,11 @@ import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
-    private FirstFragment firstFragment;
+    private ChecklistFragment firstFragment;
 
-    private List<FirstFragment.ItemClass> dataSet;
+    private List<ChecklistFragment.ItemClass> dataSet;
 
-    public Adapter(FirstFragment firstFragment, List<FirstFragment.ItemClass> dataSet){
+    public Adapter(ChecklistFragment firstFragment, List<ChecklistFragment.ItemClass> dataSet){
         this.firstFragment = firstFragment;
         this.dataSet = dataSet;
     }
@@ -45,7 +45,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return dataSet.size();
     }
 
-    public void updateAdapter(List<FirstFragment.ItemClass> newDataset) {
+    public void updateAdapter(List<ChecklistFragment.ItemClass> newDataset) {
         dataSet = newDataset;
 
         notifyDataSetChanged();

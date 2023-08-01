@@ -27,16 +27,6 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
     public enum GeneralPlaces {
         Museums,
-        Palace,
-        Churches,
-        Parks,
-        Brunch,
-        Food,
-        Dessert,
-        Drink,
-        Shopping,
-        Other,
-        Neighborhood,
         Language,
         FlightsInfo,
         Hotels,

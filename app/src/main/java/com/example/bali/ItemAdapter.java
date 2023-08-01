@@ -1,7 +1,6 @@
 package com.example.bali;
 
 import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -19,9 +19,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     List<PlaceItem> dataSet = new ArrayList<PlaceItem>();
 
-    Activity activity;
+    MainActivity activity;
 
-    public ItemAdapter(Activity activity){
+    public ItemAdapter(MainActivity activity){
         this.activity = activity;
     }
 
@@ -56,12 +56,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
         viewHolder.imageView.setOnClickListener(view -> {
             if(dataSet.get(position).generalPlace.equals(DetailedWithTitleActivity.GeneralPlaces.Checklist)) {
-                FragmentTransaction transaction = activity.getFragmentManager().beginTransaction();
+                FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
 
-//                Fragment newFragment = new ChecklistFragment();
-//                transaction.replace(R.id.fragment_container_view, newFragment);
-//                transaction.addToBackStack(null);
-//                transaction.commit();
+                Fragment newFragment = new ChecklistFragment();
+                transaction.replace(R.id.fragment_container_view, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
             else {
                 Intent intent = new Intent(activity.getBaseContext(), DetailedWithTitleActivity.class);

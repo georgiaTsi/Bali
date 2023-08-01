@@ -34,7 +34,7 @@ public class InfoFragment extends Fragment {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        itemAdapter = new ItemAdapter(getActivity());
+        itemAdapter = new ItemAdapter((MainActivity) getActivity());
         recyclerView.setAdapter(itemAdapter);
 
         populateList();
@@ -44,14 +44,6 @@ public class InfoFragment extends Fragment {
         allItemsList.add(new PlaceItem(getContext(), R.string.flights_info, R.drawable.icon_flight, DetailedWithTitleActivity.GeneralPlaces.FlightsInfo, null));
         allItemsList.add(new PlaceItem(getContext(), R.string.hotels, R.drawable.icon_hotel, DetailedWithTitleActivity.GeneralPlaces.Hotels, null));
         allItemsList.add(new PlaceItem(getContext(), R.string.checklist, R.drawable.icon_checklist, DetailedWithTitleActivity.GeneralPlaces.Checklist, null));
-//        allItemsList.add(new PlaceItem(this, R.string.parks, R.drawable.vondelpark, DetailedWithTitleActivity.GeneralPlaces.Parks, null));
-//        allItemsList.add(new PlaceItem(this, R.string.brunch, R.drawable.pluk, DetailedWithTitleActivity.GeneralPlaces.Brunch, null));
-//        allItemsList.add(new PlaceItem(this, R.string.food, R.drawable.amsterdam, DetailedWithTitleActivity.GeneralPlaces.Food, null));
-//        allItemsList.add(new PlaceItem(this, R.string.dessert, R.drawable.van_stapele, DetailedWithTitleActivity.GeneralPlaces.Dessert, null));
-//        allItemsList.add(new PlaceItem(this, R.string.drink, R.drawable.xtracold, DetailedWithTitleActivity.GeneralPlaces.Drink, null));
-//        allItemsList.add(new PlaceItem(this, R.string.other, R.drawable.adam_lookout, DetailedWithTitleActivity.GeneralPlaces.Other, null));
-//        allItemsList.add(new PlaceItem(this, R.string.neighborhood, R.drawable.jordaan, DetailedWithTitleActivity.GeneralPlaces.Neighborhood, null));
-//        allItemsList.add(new PlaceItem(this, R.string.shopping, R.drawable.kalverstraat, DetailedWithTitleActivity.GeneralPlaces.Shopping, null));
         allItemsList.add(new PlaceItem(getContext(), R.string.language, R.drawable.icon_language, DetailedWithTitleActivity.GeneralPlaces.Language, null));
 
         itemAdapter.updateAdapter(allItemsList);
