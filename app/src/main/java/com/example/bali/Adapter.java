@@ -73,10 +73,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                     textview.setPaintFlags(textview.getPaintFlags() & ~Paint.STRIKE_THRU_TEXT_FLAG);
                 }
 
-//                firstFragment.updateRow(textview.getText().toString(), isChecked);
+                firstFragment.updateRow(textview.getText().toString(), isChecked);
             });
 
-//            delete.setOnClickListener(view12 -> firstFragment.deleteRow(textview.getText().toString()));
+            delete.setOnClickListener(view12 -> firstFragment.deleteRow(textview.getText().toString()));
         }
     }
 }
