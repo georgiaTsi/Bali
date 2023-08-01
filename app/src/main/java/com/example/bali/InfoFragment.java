@@ -45,6 +45,8 @@ public class InfoFragment extends Fragment {
         allItemsList.add(new PlaceItem(getContext(), R.string.hotels, R.drawable.icon_hotel, DetailedWithTitleActivity.GeneralPlaces.Hotels, null));
         allItemsList.add(new PlaceItem(getContext(), R.string.checklist, R.drawable.icon_checklist, DetailedWithTitleActivity.GeneralPlaces.Checklist, null));
         allItemsList.add(new PlaceItem(getContext(), R.string.language, R.drawable.icon_language, DetailedWithTitleActivity.GeneralPlaces.Language, null));
+        allItemsList.add(new PlaceItem(getContext(), R.string.food, R.drawable.restaurant, DetailedWithTitleActivity.GeneralPlaces.Restaurant, null));
+        allItemsList.add(new PlaceItem(getContext(), R.string.attraction, R.drawable.forest, DetailedWithTitleActivity.GeneralPlaces.Attraction, null));
 
         itemAdapter.updateAdapter(allItemsList);
     }

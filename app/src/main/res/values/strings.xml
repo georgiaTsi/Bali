@@ -22,6 +22,7 @@
     <string name="flights_info">Flights info</string>
     <string name="hotels">Ξενοδοχεία</string>
     <string name="checklist">Checklist</string>
+    <string name="attraction">Αξιοθέατα</string>
 
     <!--Texts-->
     <string name="languageText">
@@ -60,4 +61,21 @@
     <string name="hotel_singapore_map">geo:1.3112936753798385,103.87855672337497</string>
     <string name="hotel_singapore_link">https://www.booking.com/hotel/sg/81-princess.el.html?aid=397594&amp;sid=5bb1904357fc4f02c89b7849123f61c4;label=postbooking_confpage</string>
     <string name="hotel_singapore_phone">6568428181</string>
+
+<!--    Restaurants-->
+    <string name="tukies">Tukies Coconut Shop</string>
+    <string name="tukiesText">Πρέπει να δοκιμάσουμε το παγωτό καρύδα. Το σερβίρουν και σε κέλυφος καρύδας.</string>
+
+    <string name="clearCafe">Clear Cafe</string>
+    <string name="clearCafeText">Έχει πολύ ωραία διακόσμηση. Στην είσοδο πρέπει να βγάλουμε τα παπούτσιά μας.</string>
+
+    <string name="simplySocial">Clear Cafe</string>
+    <string name="simplySocialText">Καλύτερα να κάνουμε κράτηση πριν έρθουμε με προσωπική επίσκεψη.</string>
+
+    <string name="monkey">Sacred Monkey Forest Sanctuary</string>
+    <string name="monkeyText">Είναι συγκρότημα ινδουιστικών ναών μέσα σε ζούγκλα και είναι διάσημο για τους μακάκους. Τις καθημερινές έχει εισιτήριο IDR 80,000 (περίπου 4,8 ευρώ) και τα Σαββατοκύριακα IDR 100,000 (περίπου 6 ευρώ). Δέχονται πληρωμή με κάρτα.
+    Είναι ανοιχτά από τις 9:00 πμ μέχρι τις 5:00 μμ.</string>
+
+    <string name="tanahLot">Tanah Lot</string>
+    <string name="tanahLotText">Παραδοσιακός ναός του Μπαλί που βρίσκεται σε ένα μικρό, βραχώδες νησί και προσφέρει θέα στο νερό. Μπορείς να επισκεφτείς τον ναό μόνο όταν έχει άμπωτη. Έχει εσωτερικά ανοιχτή αγορά. Η είσοδος είναι 60.000 (3,62 ευρώ).</string>
 </resources>

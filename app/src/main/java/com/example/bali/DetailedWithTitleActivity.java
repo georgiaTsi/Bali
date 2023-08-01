@@ -30,13 +30,14 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         Language,
         FlightsInfo,
         Hotels,
-        Checklist
+        Checklist,
+        Restaurant,
+        Attraction
     }
 
     String textForMaps = "";
 
     Boolean isMapsButtonHidden = false;
-    boolean isEditMode = false;
 
     TextView labelTextView;
 
@@ -120,6 +121,27 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 isMapsButtonHidden = true;
 
                 break;
+
+            case Restaurant:
+                titleToolbarText = "Φαγητό";
+
+                items.add(new PlaceItem(this, R.string.tukies, R.drawable.ice_cream, null, DetailedActivity.Places.Tukies));
+                items.add(new PlaceItem(this, R.string.clearCafe, R.drawable.cafe, null, DetailedActivity.Places.ClearCafe));
+                items.add(new PlaceItem(this, R.string.simplySocial, R.drawable.hamburger, null, DetailedActivity.Places.SimplySocial));
+
+                isMapsButtonHidden = true;
+
+                break;
+
+            case Attraction:
+                titleToolbarText = "Αξιοθέατα";
+
+                items.add(new PlaceItem(this, R.string.monkey, R.drawable.monkey, null, DetailedActivity.Places.Monkey));
+                items.add(new PlaceItem(this, R.string.tanahLot, R.drawable.tanah_lot, null, DetailedActivity.Places.TanahLot));
+
+                isMapsButtonHidden = true;
+
+                break;
         }
 
         sharedPref = this.getPreferences(Context.MODE_PRIVATE);
@@ -159,13 +181,11 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
     private void initFabs() {
 
         FloatingActionButton fabMaps = findViewById(R.id.fab_detailed_maps);
-        FloatingActionButton fabEdit = findViewById(R.id.fab_detailed_edit);
 
-        if(fabMaps == null || fabEdit == null)
+        if(fabMaps == null)
             return;
 
         fabMaps.setOnClickListener(view -> openGoogleMaps());
-        fabEdit.setOnClickListener(view -> edit(fabEdit));
 
         if (isMapsButtonHidden)
             fabMaps.setVisibility(View.INVISIBLE);
@@ -183,33 +203,5 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private void edit(FloatingActionButton fabEdit) {
-        if (!isEditMode) {//Edit
-            fabEdit.setImageResource(R.drawable.save);
-
-            labelTextView.setFocusable(true);
-            labelTextView.setEnabled(true);
-            labelTextView.setClickable(true);
-            labelTextView.setFocusableInTouchMode(true);
-        }
-        else {//Save
-            fabEdit.setImageResource(R.drawable.pencil);
-
-            labelTextView.setFocusable(false);
-            labelTextView.setEnabled(false);
-            labelTextView.setClickable(false);
-            labelTextView.setFocusableInTouchMode(false);
-
-            labelTextView.setTextColor(-16777216);
-
-            //Save
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putString(place.toString(), labelTextView.getText().toString());
-            editor.apply();
-        }
-
-        isEditMode = !isEditMode;
     }
 }
