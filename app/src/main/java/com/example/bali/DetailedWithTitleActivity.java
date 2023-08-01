@@ -1,6 +1,9 @@
 package com.example.bali;
 
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,9 +13,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.text.Html;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -37,9 +41,18 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         FlightsInfo,
         Hotels,
         Checklist
-    };
+    }
 
     String textForMaps = "";
+
+    Boolean isMapsButtonHiddeen = false;
+    boolean isEditMode = false;
+
+    TextView labelTextView;
+
+    GeneralPlaces place;
+
+    SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +60,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_detailed_with_title);
 
-        TextView labelTextView = findViewById(R.id.textview_label);
+        labelTextView = findViewById(R.id.textview_label);
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         Toolbar toolbar = findViewById(R.id.toolbar);
 
@@ -58,14 +71,14 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
         List<PlaceItem> items = new ArrayList<>();
 
-        GeneralPlaces place = (GeneralPlaces) getIntent().getExtras().get("place");
+        place = (GeneralPlaces) getIntent().getExtras().get("place");
 
         String text = "";
         String titleToolbarText = "";
 
         switch (place) {
             case Museums:
-                text = getResources().getString(R.string.museumsText);
+                //text = getResources().getString(R.string.museumsText);
                 titleToolbarText = "Μουσεία";
 
 //                items.add(new PlaceItem(this, R.string.rijksmuseum, R.drawable.rijksmuseum, null, DetailedActivity.Places.Rijksmuseum));
@@ -78,8 +91,49 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 break;
 
             case Hotels:
-                text = getResources().getString(R.string.hotelsText);
-                titleToolbarText = getResources().getString(R.string.hotels);
+                setContentView(R.layout.activity_hotels);
+
+                ImageButton ubudHotelMap = findViewById(R.id.imagebutton_hotels_ubudmap);
+                ubudHotelMap.setOnClickListener(v -> {
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.hotel_ubud_map))));
+                    }
+                    catch (ActivityNotFoundException e){
+                        Toast.makeText(DetailedWithTitleActivity.this, "No app found for handle this Url", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                ImageButton ubudHotelLink = findViewById(R.id.imagebutton_hotels_ubudlink);
+                ubudHotelLink.setOnClickListener(v -> {
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.hotel_ubud_link))));
+                    }
+                    catch (ActivityNotFoundException e){
+                        Toast.makeText(DetailedWithTitleActivity.this, "No app found for handle this Url", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                ImageButton singaporeHotelMap = findViewById(R.id.imagebutton_hotels_singaporemap);
+                singaporeHotelMap.setOnClickListener(v -> {
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.hotel_singapore_map))));
+                    }
+                    catch (ActivityNotFoundException e){
+                        Toast.makeText(DetailedWithTitleActivity.this, "No app found for handle this Url", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                ImageButton singaporeHotelLink = findViewById(R.id.imagebutton_hotels_singaporelink);
+                singaporeHotelLink.setOnClickListener(v -> {
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.hotel_singapore_link))));
+                    }
+                    catch (ActivityNotFoundException e){
+                        Toast.makeText(DetailedWithTitleActivity.this, "No app found for handle this Url", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                isMapsButtonHiddeen = true;
 
                 break;
 
@@ -193,6 +247,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
                 text = getResources().getString(R.string.languageText);
                 titleToolbarText = getResources().getString(R.string.language);
+                isMapsButtonHiddeen = true;
 
                 break;
 
@@ -200,43 +255,78 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
                 text = getResources().getString(R.string.flights_infoText);
                 titleToolbarText = getResources().getString(R.string.flights_info);
+                isMapsButtonHiddeen = true;
 
                 break;
         }
 
-        labelTextView.setText(text);
+        sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        String details = sharedPref.getString(place.toString(), text);
+
+        labelTextView.setText(details);
         toolbar.setTitle(titleToolbarText);
         toolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
 
         adapter.updateAdapter(items);
 
-        initMapFab();
+        initFabs();
     }
 
-    private void initMapFab() {
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_detailed_maps);
+    private void initFabs() {
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openGoogleMaps();
-            }
-        });
+        FloatingActionButton fabMaps = findViewById(R.id.fab_detailed_maps);
+        FloatingActionButton fabEdit = findViewById(R.id.fab_detailed_edit);
+
+        if(fabMaps == null || fabEdit == null)
+            return;
+
+        fabMaps.setOnClickListener(view -> openGoogleMaps());
+        fabEdit.setOnClickListener(view -> edit(fabEdit));
+
+        if (isMapsButtonHiddeen)
+            fabMaps.setVisibility(View.INVISIBLE);
     }
 
     private void openGoogleMaps() {
-        try{
-            Uri gmmIntentUri = Uri.parse("geo:52.36864099594794, 4.8970006533552635?q="+textForMaps);
+        try {
+            Uri gmmIntentUri = Uri.parse("geo:52.36864099594794, 4.8970006533552635?q=" + textForMaps);
 
             Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
 
             mapIntent.setPackage("com.google.android.apps.maps");
 
             startActivity(mapIntent);
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void edit(FloatingActionButton fabEdit) {
+        if (!isEditMode) {//Edit
+            fabEdit.setImageResource(R.drawable.save);
+
+            labelTextView.setFocusable(true);
+            labelTextView.setEnabled(true);
+            labelTextView.setClickable(true);
+            labelTextView.setFocusableInTouchMode(true);
+        }
+        else {//Save
+            fabEdit.setImageResource(R.drawable.pencil);
+
+            labelTextView.setFocusable(false);
+            labelTextView.setEnabled(false);
+            labelTextView.setClickable(false);
+            labelTextView.setFocusableInTouchMode(false);
+
+            labelTextView.setTextColor(-16777216);
+
+            //Save
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putString(place.toString(), labelTextView.getText().toString());
+            editor.apply();
+        }
+
+        isEditMode = !isEditMode;
     }
 }

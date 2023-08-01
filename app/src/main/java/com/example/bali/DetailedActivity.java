@@ -64,18 +64,11 @@ public class DetailedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        CollapsingToolbarLayout toolBarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_detailed_maps);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openGoogleMaps();
-            }
-        });
+        FloatingActionButton fab = findViewById(R.id.fab_detailed_maps);
+        fab.setOnClickListener(view -> openGoogleMaps());
 
         initEditFab();
 
@@ -341,35 +334,32 @@ public class DetailedActivity extends AppCompatActivity {
 
     private void initEditFab(){
         FloatingActionButton editFab = findViewById(R.id.fab_detailed_edit);
-        editFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!isEditMode){//Edit
-                    editFab.setImageResource(R.drawable.save);
+        editFab.setOnClickListener(view -> {
+            if(!isEditMode){//Edit
+                editFab.setImageResource(R.drawable.save);
 
-                    textView.setFocusable(true);
-                    textView.setEnabled(true);
-                    textView.setClickable(true);
-                    textView.setFocusableInTouchMode(true);
-                }
-                else{//Save
-                    editFab.setImageResource(R.drawable.pencil);
-
-                    textView.setFocusable(false);
-                    textView.setEnabled(false);
-                    textView.setClickable(false);
-                    textView.setFocusableInTouchMode(false);
-
-                    textView.setTextColor(-16777216);
-
-                    //Save
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putString(place.toString(), textView.getText().toString());
-                    editor.apply();
-                }
-
-                isEditMode = !isEditMode;
+                textView.setFocusable(true);
+                textView.setEnabled(true);
+                textView.setClickable(true);
+                textView.setFocusableInTouchMode(true);
             }
+            else{//Save
+                editFab.setImageResource(R.drawable.pencil);
+
+                textView.setFocusable(false);
+                textView.setEnabled(false);
+                textView.setClickable(false);
+                textView.setFocusableInTouchMode(false);
+
+                textView.setTextColor(-16777216);
+
+                //Save
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString(place.toString(), textView.getText().toString());
+                editor.apply();
+            }
+
+            isEditMode = !isEditMode;
         });
     }
 }

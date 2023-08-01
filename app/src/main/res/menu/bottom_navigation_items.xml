@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_info"
+        android:title="Info"
+        android:icon="@drawable/info" />
+    <item android:id="@+id/action_places"
+        android:title="Places"
+        android:icon="@drawable/places" />
+    <item android:id="@+id/action_notes"
+        android:title="Notes"
+        android:icon="@drawable/notes" />
+</menu>

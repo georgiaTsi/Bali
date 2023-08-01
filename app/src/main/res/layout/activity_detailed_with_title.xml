@@ -27,23 +27,24 @@
     <include layout="@layout/content_detailed_with_title" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_detailed_edit"
+        android:id="@+id/fab_detailed_maps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        app:layout_anchor="@id/fab_detailed_maps"
+        app:layout_anchor="@id/fab_detailed_edit"
         android:layout_gravity="bottom"
         android:paddingRight="10dp"
-        app:srcCompat="@drawable/pencil" />
+        app:srcCompat="@android:drawable/ic_dialog_map" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_detailed_maps"
+        android:id="@+id/fab_detailed_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@id/fab_detailed_maps1"
         app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@android:drawable/ic_dialog_map" />
+        app:srcCompat="@drawable/pencil" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_detailed_maps1"
         android:layout_width="0dp"

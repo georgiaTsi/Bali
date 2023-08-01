@@ -22,7 +22,8 @@
             android:text="Label text"
             android:textColor="@color/black"
             android:layout_margin="10dp"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:editable="true"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"

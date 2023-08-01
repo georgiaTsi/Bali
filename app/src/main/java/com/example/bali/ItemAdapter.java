@@ -1,6 +1,7 @@
 package com.example.bali;
 
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -47,15 +49,25 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         }
 
         viewHolder.itemView.setVisibility(View.VISIBLE);
-        viewHolder.itemView.setLayoutParams(new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        viewHolder.itemView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
         viewHolder.imageView.setImageDrawable(dataSet.get(position).image);
         viewHolder.textView.setText(dataSet.get(position).title);
 
         viewHolder.imageView.setOnClickListener(view -> {
-            Intent intent = new Intent(activity.getBaseContext(), DetailedWithTitleActivity.class);
-            intent.putExtra("place", dataSet.get(position).generalPlace);
-            activity.startActivity(intent);
+            if(dataSet.get(position).generalPlace.equals(DetailedWithTitleActivity.GeneralPlaces.Checklist)) {
+                FragmentTransaction transaction = activity.getFragmentManager().beginTransaction();
+
+//                Fragment newFragment = new ChecklistFragment();
+//                transaction.replace(R.id.fragment_container_view, newFragment);
+//                transaction.addToBackStack(null);
+//                transaction.commit();
+            }
+            else {
+                Intent intent = new Intent(activity.getBaseContext(), DetailedWithTitleActivity.class);
+                intent.putExtra("place", dataSet.get(position).generalPlace);
+                activity.startActivity(intent);
+            }
         });
 
         //next

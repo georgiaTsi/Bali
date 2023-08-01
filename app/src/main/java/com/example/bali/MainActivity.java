@@ -1,81 +1,56 @@
 package com.example.bali;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
-    List<PlaceItem> allItemsList = new ArrayList<>();
-
-    RecyclerView recyclerView;
-    ItemAdapter itemAdapter;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initializeRecyclerView();
-    }
-
-    private void initializeRecyclerView(){
-
-        recyclerView = findViewById(R.id.recyclerview_main);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        itemAdapter = new com.example.bali.ItemAdapter(this);
-        recyclerView.setAdapter(itemAdapter);
-
-        populateList();
+        bottomNavigationView = findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        bottomNavigationView.setSelectedItemId(R.id.info);
+        bottomNavigationView.setItemIconTintList(null);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_detailed, menu);
-        menu.getItem(0).getIcon().mutate().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        return super.onCreateOptionsMenu(menu);
-    }
+        if(item.getTitle().equals("Info")){
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
+            Fragment newFragment = new InfoFragment();
 
-        if(id == R.id.action_notes){
-            Intent intent = new Intent(getBaseContext(), NotesActivity.class);
-            startActivity(intent);
+            transaction.replace(R.id.fragment_container_view, newFragment);
+        }
+        else if(item.getTitle().equals("Notes")){
+
+            Fragment newFragment = new NotesFragment();
+
+            transaction.replace(R.id.fragment_container_view, newFragment);
         }
 
-        return super.onOptionsItemSelected(item);
-    }
+        transaction.addToBackStack(null);
+        transaction.commit();
 
-    private void populateList(){
-        allItemsList.add(new PlaceItem(this, R.string.flights_info, R.drawable.icon_flight, DetailedWithTitleActivity.GeneralPlaces.FlightsInfo, null));
-        allItemsList.add(new PlaceItem(this, R.string.hotels, R.drawable.icon_hotel, DetailedWithTitleActivity.GeneralPlaces.Hotels, null));
-        allItemsList.add(new PlaceItem(this, R.string.checklist, R.drawable.icon_checklist, DetailedWithTitleActivity.GeneralPlaces.Checklist, null));
-//        allItemsList.add(new PlaceItem(this, R.string.parks, R.drawable.vondelpark, DetailedWithTitleActivity.GeneralPlaces.Parks, null));
-//        allItemsList.add(new PlaceItem(this, R.string.brunch, R.drawable.pluk, DetailedWithTitleActivity.GeneralPlaces.Brunch, null));
-//        allItemsList.add(new PlaceItem(this, R.string.food, R.drawable.amsterdam, DetailedWithTitleActivity.GeneralPlaces.Food, null));
-//        allItemsList.add(new PlaceItem(this, R.string.dessert, R.drawable.van_stapele, DetailedWithTitleActivity.GeneralPlaces.Dessert, null));
-//        allItemsList.add(new PlaceItem(this, R.string.drink, R.drawable.xtracold, DetailedWithTitleActivity.GeneralPlaces.Drink, null));
-//        allItemsList.add(new PlaceItem(this, R.string.other, R.drawable.adam_lookout, DetailedWithTitleActivity.GeneralPlaces.Other, null));
-//        allItemsList.add(new PlaceItem(this, R.string.neighborhood, R.drawable.jordaan, DetailedWithTitleActivity.GeneralPlaces.Neighborhood, null));
-//        allItemsList.add(new PlaceItem(this, R.string.shopping, R.drawable.kalverstraat, DetailedWithTitleActivity.GeneralPlaces.Shopping, null));
-        allItemsList.add(new PlaceItem(this, R.string.language, R.drawable.icon_language, DetailedWithTitleActivity.GeneralPlaces.Language, null));
-
-        itemAdapter.updateAdapter(allItemsList);
+        return true;
     }
 }
