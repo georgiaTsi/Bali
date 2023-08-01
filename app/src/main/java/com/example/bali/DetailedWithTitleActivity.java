@@ -125,9 +125,9 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
             case Restaurant:
                 titleToolbarText = "Φαγητό";
 
-                items.add(new PlaceItem(this, R.string.tukies, R.drawable.ice_cream, null, DetailedActivity.Places.Tukies));
-                items.add(new PlaceItem(this, R.string.clearCafe, R.drawable.cafe, null, DetailedActivity.Places.ClearCafe));
-                items.add(new PlaceItem(this, R.string.simplySocial, R.drawable.hamburger, null, DetailedActivity.Places.SimplySocial));
+                items.add(new PlaceItem(this, R.string.tukies, R.drawable.tukies, null, DetailedActivity.Places.Tukies));
+                items.add(new PlaceItem(this, R.string.clearCafe, R.drawable.clear_cafe, null, DetailedActivity.Places.ClearCafe));
+                items.add(new PlaceItem(this, R.string.simplySocial, R.drawable.simply_social, null, DetailedActivity.Places.SimplySocial));
 
                 isMapsButtonHidden = true;
 
