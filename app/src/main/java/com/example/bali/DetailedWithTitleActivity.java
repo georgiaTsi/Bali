@@ -92,6 +92,15 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 buttonWithLink(findViewById(R.id.imagebutton_hotels_singaporemap), getResources().getString(R.string.hotel_singapore_map));
                 buttonWithLink(findViewById(R.id.imagebutton_hotels_singaporelink), getResources().getString(R.string.hotel_singapore_link));
 
+                openWhatsApp(findViewById(R.id.imagebutton_hotels_ubudwhatsapp), getResources().getString(R.string.hotel_ubud_phone));
+                openWhatsApp(findViewById(R.id.imagebutton_hotels_uluwatuwhatsapp), getResources().getString(R.string.hotel_uluwatu_phone));
+
+                findViewById(R.id.imagebutton_hotels_singaporewhatsapp).setOnClickListener(v -> {
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    callIntent.setData(Uri.parse("tel:"+getResources().getString(R.string.hotel_singapore_phone)));
+                    startActivity(callIntent);
+                });
+
                 isMapsButtonHidden = true;
 
                 break;
@@ -124,6 +133,15 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         adapter.updateAdapter(items);
 
         initFabs();
+    }
+
+    private void openWhatsApp(View ViewById, String String) {
+        ViewById.setOnClickListener(v -> {
+            String url = "https://api.whatsapp.com/send?phone=" + String;
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+        });
     }
 
     private void buttonWithLink(ImageButton ViewById, String String) {

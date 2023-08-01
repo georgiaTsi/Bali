@@ -53,9 +53,11 @@
 <!--    Hotels-->
     <string name="hotel_ubud_map">geo:-8.504676588297972,115.26685201349211</string>
     <string name="hotel_ubud_link">https://www.airbnb.gr/rooms/34370184?source_impression_id=p3_1681203188_uV5PkB3VfhHXoUpW</string>
+    <string name="hotel_ubud_phone">6281338873019</string>
     <string name="hotel_uluwatu_map">geo:-8.829185557225172,115.09214682716248</string>
     <string name="hotel_uluwatu_link">https://www.booking.com/hotel/id/the-pande-hill-homestay.en-gb.html?aid=2311236&amp;sid=88db27efe5cc85a3a3f0d5a1eb51d2dd;label=postbooking_directions</string>
+    <string name="hotel_uluwatu_phone">6287861219279</string>
     <string name="hotel_singapore_map">geo:1.3112936753798385,103.87855672337497</string>
     <string name="hotel_singapore_link">https://www.booking.com/hotel/sg/81-princess.el.html?aid=397594&amp;sid=5bb1904357fc4f02c89b7849123f61c4;label=postbooking_confpage</string>
-
+    <string name="hotel_singapore_phone">6568428181</string>
 </resources>
