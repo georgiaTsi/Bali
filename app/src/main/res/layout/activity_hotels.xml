@@ -52,6 +52,54 @@
         </LinearLayout>
     </LinearLayout>
 
+    <!--    Uluwatu-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uluwatu 16-21 Αυγούστου"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Τιμή: 256 ευρώ"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Διεύθυνση: Jalan Raya Uluwatu No. 188, 80361"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <ImageButton
+                android:id="@+id/imagebutton_hotels_uluwatumap"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="50dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hotel_map"
+                android:backgroundTint="@color/white"/>
+            <ImageButton
+                android:id="@+id/imagebutton_hotels_uluwatulink"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hotel_booking"
+                android:backgroundTint="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
 <!--    Singapore-->
     <LinearLayout
         android:layout_width="match_parent"

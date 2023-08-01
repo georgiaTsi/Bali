@@ -113,6 +113,26 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                     }
                 });
 
+                ImageButton uluwatuHotelMap = findViewById(R.id.imagebutton_hotels_uluwatumap);
+                uluwatuHotelMap.setOnClickListener(v -> {
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.hotel_uluwatu_map))));
+                    }
+                    catch (ActivityNotFoundException e){
+                        Toast.makeText(DetailedWithTitleActivity.this, "No app found for handle this Url", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                ImageButton uluwatuHotelLink = findViewById(R.id.imagebutton_hotels_uluwatulink);
+                uluwatuHotelLink.setOnClickListener(v -> {
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.hotel_uluwatu_link))));
+                    }
+                    catch (ActivityNotFoundException e){
+                        Toast.makeText(DetailedWithTitleActivity.this, "No app found for handle this Url", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
                 ImageButton singaporeHotelMap = findViewById(R.id.imagebutton_hotels_singaporemap);
                 singaporeHotelMap.setOnClickListener(v -> {
                     try {
