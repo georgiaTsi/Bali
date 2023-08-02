@@ -10,6 +10,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.bali.Adapters.FlightAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -116,8 +118,31 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
             case FlightsInfo:
 
-                text = getResources().getString(R.string.flights_infoText);
-                titleToolbarText = getResources().getString(R.string.flights_info);
+                setContentView(R.layout.fragment_flights);
+
+                FlightAdapter adapter1 = new FlightAdapter();
+
+                RecyclerView recyclerView1 = findViewById(R.id.flights_recyclerview);
+                recyclerView1.setLayoutManager(new LinearLayoutManager(this));
+                recyclerView1.setAdapter(adapter1);
+
+                List<FlightInfo> list = new ArrayList<>();
+
+                FlightInfo flightInfo = new FlightInfo();
+                flightInfo.label = "ΑΘήνα - Ντενπασάρ";
+                flightInfo.calendar = ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_9, null);
+                flightInfo.from = "Από: Athens Greece";
+                flightInfo.to = "Προς: Istanbul Airport Turkey";
+                flightInfo.time = "21:45 - 23:15";
+                flightInfo.flightInfo = "Πτήση: TK1846";
+                flightInfo.from1 = "Από: Istanbul Airport Turkey";
+                flightInfo.to1 = "Προς: Denpasar Bali Indonesia";
+                flightInfo.time1 = "01:50 - 19:15";
+                flightInfo.flightInfo1 = "Πτήση: TK66";
+
+                list.add(flightInfo);
+                adapter1.updateAdapter(list);
+
                 isMapsButtonHidden = true;
 
                 break;

@@ -1,16 +1,21 @@
-package com.example.bali;
+package com.example.bali.Adapters;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.example.bali.R;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.bali.ChecklistFragment;
+import com.example.bali.DetailedWithTitleActivity;
+import com.example.bali.MainActivity;
+import com.example.bali.PlaceItem;
 
 import java.util.ArrayList;
 import java.util.List;
