@@ -128,19 +128,41 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
                 List<FlightInfo> list = new ArrayList<>();
 
-                FlightInfo flightInfo = new FlightInfo();
-                flightInfo.label = "ΑΘήνα - Ντενπασάρ";
-                flightInfo.calendar = ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_9, null);
-                flightInfo.from = "Από: Athens Greece";
-                flightInfo.to = "Προς: Istanbul Airport Turkey";
-                flightInfo.time = "21:45 - 23:15";
-                flightInfo.flightInfo = "Πτήση: TK1846";
-                flightInfo.from1 = "Από: Istanbul Airport Turkey";
-                flightInfo.to1 = "Προς: Denpasar Bali Indonesia";
-                flightInfo.time1 = "01:50 - 19:15";
-                flightInfo.flightInfo1 = "Πτήση: TK66";
+                FlightInfo flightInfoFirst = new FlightInfo();
+                flightInfoFirst.label = "ΑΘήνα - Ντενπασάρ";
+                flightInfoFirst.calendar = ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_9, null);
+                flightInfoFirst.from = "Από: Athens Greece";
+                flightInfoFirst.to = "Προς: Istanbul Airport Turkey";
+                flightInfoFirst.time = "21:45 - 23:15";
+                flightInfoFirst.flightInfo = "Πτήση: TK1846";
+                flightInfoFirst.from1 = "Από: Istanbul Airport Turkey";
+                flightInfoFirst.to1 = "Προς: Denpasar Bali Indonesia";
+                flightInfoFirst.time1 = "01:50 - 19:15";
+                flightInfoFirst.flightInfo1 = "Πτήση: TK66";
+                list.add(flightInfoFirst);
 
-                list.add(flightInfo);
+                FlightInfo flightInfoSecond = new FlightInfo();
+                flightInfoSecond.label = "Ντενπασάρ - Σιγκαπούρη";
+                flightInfoSecond.calendar = ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_21, null);
+                flightInfoSecond.from = "Από: Ngurah Rai Airport I";
+                flightInfoSecond.to = "Προς: Singapore Changi Airport T3";
+                flightInfoSecond.time = "07:20 - 10:00";
+                flightInfoSecond.flightInfo = "Πτήση: SQ949";
+                list.add(flightInfoSecond);
+
+                FlightInfo flightInfoThird = new FlightInfo();
+                flightInfoThird.label = "Σιγκαπούρη - Αθήνα";
+                flightInfoThird.calendar = ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_25, null);
+                flightInfoThird.from = "Από: Singapore Changi Αεροσταθμός (Terminal) 1";
+                flightInfoThird.to = "Προς: Istanbul Airport Turkey";
+                flightInfoThird.time = "10:40 - 16:45";
+                flightInfoThird.flightInfo = "Πτήση: TK209";
+                flightInfoThird.from1 = "Από: Istanbul Airport Turkey";
+                flightInfoThird.to1 = "Προς: Athens Greece";
+                flightInfoThird.time1 = "18:50 - 20:15";
+                flightInfoThird.flightInfo1 = "Πτήση: TK1845";
+                list.add(flightInfoThird);
+
                 adapter1.updateAdapter(list);
 
                 isMapsButtonHidden = true;

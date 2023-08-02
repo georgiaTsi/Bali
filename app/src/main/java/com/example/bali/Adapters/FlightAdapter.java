@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.bali.R;
 
@@ -38,7 +39,9 @@ public class FlightAdapter extends RecyclerView.Adapter<FlightAdapter.ViewHolder
         TextView textViewTime1 = view.findViewById(R.id.textview_flight_time1);
         TextView textViewInfo1 = view.findViewById(R.id.textview_flight_info1);
 
-        return new ViewHolder(view, imageViewCalendar, textViewLabel, textViewFrom, textViewTo, textViewTime, textViewInfo, textViewFrom1, textViewTo1, textViewTime1, textViewInfo1);
+        LinearLayout layoutSecondFlight = view.findViewById(R.id.layout_flight_second);
+
+        return new ViewHolder(view, imageViewCalendar, textViewLabel, textViewFrom, textViewTo, textViewTime, textViewInfo, textViewFrom1, textViewTo1, textViewTime1, textViewInfo1, layoutSecondFlight);
     }
 
     @Override
@@ -49,10 +52,17 @@ public class FlightAdapter extends RecyclerView.Adapter<FlightAdapter.ViewHolder
         holder.textViewTo.setText(dataSet.get(position).to);
         holder.textViewTime.setText(dataSet.get(position).time);
         holder.textViewInfo.setText(dataSet.get(position).flightInfo);
-        holder.textViewFrom1.setText(dataSet.get(position).from1);
-        holder.textViewTo1.setText(dataSet.get(position).to1);
-        holder.textViewTime1.setText(dataSet.get(position).time1);
-        holder.textViewInfo1.setText(dataSet.get(position).flightInfo1);
+
+        if(position != 1){
+            holder.layoutSecondFlight.setVisibility(View.VISIBLE);
+
+            holder.textViewFrom1.setText(dataSet.get(position).from1);
+            holder.textViewTo1.setText(dataSet.get(position).to1);
+            holder.textViewTime1.setText(dataSet.get(position).time1);
+            holder.textViewInfo1.setText(dataSet.get(position).flightInfo1);
+        }
+         else
+             holder.layoutSecondFlight.setVisibility(View.GONE);
     }
 
     @Override
@@ -80,10 +90,11 @@ public class FlightAdapter extends RecyclerView.Adapter<FlightAdapter.ViewHolder
         public TextView textViewTo1;
         public TextView textViewTime1;
         public TextView textViewInfo1;
+        public LinearLayout layoutSecondFlight;
 
         public ViewHolder(View view, ImageView imageViewCalendar, TextView textViewLabel, TextView textViewFrom, TextView textViewTo,
                           TextView textViewTime, TextView textViewInfo, TextView textViewFrom1, TextView textViewTo1,
-                          TextView textViewTime1, TextView textViewInfo1){
+                          TextView textViewTime1, TextView textViewInfo1, LinearLayout layoutSecondFlight){
             super(view);
 
             this.imageViewCalendar = imageViewCalendar;
@@ -96,6 +107,7 @@ public class FlightAdapter extends RecyclerView.Adapter<FlightAdapter.ViewHolder
             this.textViewTo1 = textViewTo1;
             this.textViewTime1 = textViewTime1;
             this.textViewInfo1 = textViewInfo1;
+            this.layoutSecondFlight = layoutSecondFlight;
         }
     }
 }
