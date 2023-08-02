@@ -1,11 +1,14 @@
 package com.example.bali.Adapters;
 
+import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.bali.DetailedWithTitleActivity;
 import com.example.bali.R;
 
 import androidx.annotation.NonNull;
@@ -20,6 +23,16 @@ import java.util.List;
 public class FlightAdapter extends RecyclerView.Adapter<FlightAdapter.ViewHolder> {
 
     List<FlightInfo> dataSet = new ArrayList<>();
+
+    DetailedWithTitleActivity activity;
+
+    public FlightAdapter(){
+
+    }
+
+    public FlightAdapter(DetailedWithTitleActivity activity){
+        this.activity = activity;
+    }
 
     @NonNull
     @Override
@@ -63,6 +76,15 @@ public class FlightAdapter extends RecyclerView.Adapter<FlightAdapter.ViewHolder
         }
          else
              holder.layoutSecondFlight.setVisibility(View.GONE);
+
+         holder.textViewLabel.setOnClickListener(v -> {
+             AlertDialog ad = new AlertDialog.Builder(activity)
+                     .create();
+             ad.setCancelable(true);
+             ad.setTitle("");
+             ad.setMessage(dataSet.get(position).moreInfo);
+             ad.show();
+         });
     }
 
     @Override
