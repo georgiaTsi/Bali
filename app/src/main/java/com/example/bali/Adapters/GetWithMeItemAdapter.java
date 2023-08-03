@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bali.Adapter;
 import com.example.bali.R;
 import com.example.bali.GetWithMeFragment;
 

@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bali.ChecklistFragment;
 import com.example.bali.DetailedWithTitleActivity;
 import com.example.bali.MainActivity;
 import com.example.bali.PlaceItem;

@@ -14,7 +14,6 @@ import com.example.bali.R;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bali.ChecklistFragment;
 import com.example.bali.FlightInfo;
 
 import java.util.ArrayList;
