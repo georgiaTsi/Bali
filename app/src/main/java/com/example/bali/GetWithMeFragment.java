@@ -133,6 +133,13 @@ public class GetWithMeFragment extends Fragment {
         updateRecyclerView();
     }
 
+    public void editTitle(String newTitle, String oldTitle){
+        String query = String.format("UPDATE GetWithMeList SET Label = '" + newTitle + "' WHERE Label = '" + oldTitle + "'");
+        myDatabase.execSQL(query);
+
+        updateRecyclerView();
+    }
+
     public void deleteRow(String item) {
         myDatabase.execSQL("DELETE FROM GetWithMeList WHERE Title = '" + item + "'");
 
