@@ -59,6 +59,8 @@ public class InfoFragment extends Fragment {
     }
 
     private void populateList() {
+        allItemsList.clear();
+
         if (menu.equals(Menu.Info)) {
             allItemsList.add(new PlaceItem(getContext(), R.string.flights_info, R.drawable.icon_flight, DetailedWithTitleActivity.GeneralPlaces.FlightsInfo, null));
             allItemsList.add(new PlaceItem(getContext(), R.string.hotels, R.drawable.icon_hotel, DetailedWithTitleActivity.GeneralPlaces.Hotels, null));

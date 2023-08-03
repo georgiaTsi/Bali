@@ -139,7 +139,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 flightInfoFirst.to1 = "Προς: Denpasar Bali Indonesia";
                 flightInfoFirst.time1 = "01:50 - 19:15";
                 flightInfoFirst.flightInfo1 = "Πτήση: TK66";
-                flightInfoFirst.moreInfo = "Διάρκεια ταξιδιού 16 ώρες και 30 λεπτά\nΑναμονή 2 ώρες και 35 λεπτά\n\nTurkish Airlines\nΑποσκευή 30 κιλών και χειραποσκευή 8 κιλών (55x40x23 cm)";
+                flightInfoFirst.moreInfo = "Διάρκεια ταξιδιού 16 ώρες και 30 λεπτά\n\nΑναμονή 2 ώρες και 35 λεπτά\n\nTurkish Airlines\nΑποσκευή 30 κιλών και χειραποσκευή 8 κιλών (55x40x23 cm)";
                 list.add(flightInfoFirst);
 
                 FlightInfo flightInfoSecond = new FlightInfo();
@@ -163,7 +163,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 flightInfoThird.to1 = "Προς: Athens Greece";
                 flightInfoThird.time1 = "18:50 - 20:15";
                 flightInfoThird.flightInfo1 = "Πτήση: TK1845";
-                flightInfoThird.moreInfo = "Διάρκεια ταξιδιού 14 ώρες και 35 λεπτά\nΑναμονή 2 ώρες και 5 λεπτά\n\nTurkish Airlines\nΑποσκευή 30 κιλών και χειραποσκευή 8 κιλών (55x40x23 cm)";
+                flightInfoThird.moreInfo = "Διάρκεια ταξιδιού 14 ώρες και 35 λεπτά\n\nΑναμονή 2 ώρες και 5 λεπτά\n\nTurkish Airlines\nΑποσκευή 30 κιλών και χειραποσκευή 8 κιλών (55x40x23 cm)";
                 list.add(flightInfoThird);
 
                 adapter1.updateAdapter(list);
