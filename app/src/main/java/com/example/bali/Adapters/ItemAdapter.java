@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.bali.GetWithMeFragment;
 import com.example.bali.R;
 
 import androidx.fragment.app.Fragment;
@@ -63,7 +65,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             if(dataSet.get(position).generalPlace.equals(DetailedWithTitleActivity.GeneralPlaces.Checklist)) {
                 FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
 
-                Fragment newFragment = new ChecklistFragment();
+//                Fragment newFragment = new ChecklistFragment();
+                Fragment newFragment = new GetWithMeFragment();
                 transaction.replace(R.id.fragment_container_view, newFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
