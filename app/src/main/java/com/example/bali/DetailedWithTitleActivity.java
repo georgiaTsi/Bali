@@ -34,24 +34,23 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         Hotels,
         Checklist,
         Restaurant,
-        Attraction
+        Attraction,
+        Money
     }
 
     String textForMaps = "";
 
-    Boolean isMapsButtonHidden = false;
-
     TextView labelTextView;
 
     GeneralPlaces place;
-
-    SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_detailed_with_title);
+
+        ImageButton fabEdit = findViewById(R.id.imagebutton_detailed_with_title_edit);
 
         labelTextView = findViewById(R.id.textview_label);
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
@@ -68,6 +67,10 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
         String text = "";
         String titleToolbarText = "";
+
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+
+        final Boolean[] isEditMode = {false};
 
         switch (place) {
             case Hotels:
@@ -91,15 +94,12 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                     startActivity(callIntent);
                 });
 
-                isMapsButtonHidden = true;
-
                 break;
 
             case Language:
 
                 text = getResources().getString(R.string.languageText);
                 titleToolbarText = getResources().getString(R.string.language);
-                isMapsButtonHidden = true;
 
                 break;
 
@@ -155,8 +155,6 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
                 adapter1.updateAdapter(list);
 
-                isMapsButtonHidden = true;
-
                 break;
 
             case Restaurant:
@@ -165,8 +163,6 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 items.add(new PlaceItem(this, R.string.tukies, R.drawable.tukies, null, DetailedActivity.Places.Tukies));
                 items.add(new PlaceItem(this, R.string.clearCafe, R.drawable.clear_cafe, null, DetailedActivity.Places.ClearCafe));
                 items.add(new PlaceItem(this, R.string.simplySocial, R.drawable.simply_social, null, DetailedActivity.Places.SimplySocial));
-
-                isMapsButtonHidden = true;
 
                 break;
 
@@ -181,15 +177,40 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 items.add(new PlaceItem(this, R.string.tamanUjung, R.drawable.taman_ujung, null, DetailedActivity.Places.TamanUjung));
                 items.add(new PlaceItem(this, R.string.kerthaGosa, R.drawable.kertha_gosa, null, DetailedActivity.Places.KerthaGosa));
 
-                isMapsButtonHidden = true;
+                break;
+
+            case Money:
+
+                text = sharedPref.getString("money", getResources().getString(R.string.moneyTextDefault));
+
+                titleToolbarText = getResources().getString(R.string.money);
+
+                fabEdit.setVisibility(View.VISIBLE);
+                fabEdit.setOnClickListener(v -> {
+
+                    if(!isEditMode[0]) {//edit
+                        fabEdit.setImageDrawable(getDrawable(R.drawable.save_cute));
+                    }
+                    else{//save
+                        fabEdit.setImageDrawable(getDrawable(R.drawable.edit));
+
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        editor.putString("money", labelTextView.getText().toString());
+                        editor.apply();
+                    }
+
+                    isEditMode[0] = !isEditMode[0];
+
+                    labelTextView.setFocusable(isEditMode[0]);
+                    labelTextView.setEnabled(isEditMode[0]);
+                    labelTextView.setClickable(isEditMode[0]);
+                    labelTextView.setFocusableInTouchMode(isEditMode[0]);
+                });
 
                 break;
         }
 
-        sharedPref = this.getPreferences(Context.MODE_PRIVATE);
-        String details = sharedPref.getString(place.toString(), text);
-
-        labelTextView.setText(details);
+        labelTextView.setText(text);
         toolbar.setTitle(titleToolbarText);
         toolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
@@ -229,8 +250,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
         fabMaps.setOnClickListener(view -> openGoogleMaps());
 
-        if (isMapsButtonHidden)
-            fabMaps.setVisibility(View.INVISIBLE);
+        fabMaps.setVisibility(View.INVISIBLE);
     }
 
     private void openGoogleMaps() {

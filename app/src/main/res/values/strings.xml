@@ -19,6 +19,7 @@
     <string name="shopping">Ψώνια</string>
     <string name="neighborhood">Γειτονιές</string>
     <string name="language">Φράσεις</string>
+    <string name="money">Χρήματα</string>
     <string name="flights_info">Flights info</string>
     <string name="hotels">Ξενοδοχεία</string>
     <string name="checklist">Checklist</string>
@@ -35,6 +36,14 @@
         Turkish Airlines\n
         Αποσκευή 30 κιλών και χειραποσκευή 8 κιλών (55x40x23 cm)\n\n
     </string>
+    <string name="moneyTextDefault">
+        Αεροπορικά\n\n
+        Αθήνα->Μπαλί: 951,42 το άτομο (Φαίδρα)\n
+        Μπαλί->Σιγκαπούρη: 136,61 το άτομο (Γεωργία)\n
+        Σιγκαπούρη->Αθήνα: 651,71 το άτομο (Γεωργία)\n
+        \n\n\n
+        Ξενοδοχεία\n\n
+        Airbnb Unud: 79,14 το άτομο (Γεωργία)</string>
 
 <!--    Hotels-->
     <string name="hotel_ubud_map">geo:-8.504676588297972,115.26685201349211</string>
