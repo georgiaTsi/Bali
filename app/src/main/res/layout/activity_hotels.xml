@@ -20,6 +20,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Guest House ubud"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Τιμή: 158,28 ευρώ"
             android:textSize="16sp"
             android:textColor="@color/black"/>
@@ -90,6 +96,12 @@
             android:textSize="18sp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Pande Hill Homestay"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -166,6 +178,12 @@
             android:textSize="20sp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotel 81 Premier Princess"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
