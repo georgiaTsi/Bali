@@ -51,6 +51,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detailed_with_title);
 
         ImageButton fabEdit = findViewById(R.id.imagebutton_detailed_with_title_edit);
+        fabEdit.setVisibility(View.GONE);
 
         labelTextView = findViewById(R.id.textview_label);
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
