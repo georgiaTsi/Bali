@@ -70,19 +70,6 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         String titleToolbarText = "";
 
         switch (place) {
-            case Museums:
-                //text = getResources().getString(R.string.museumsText);
-                titleToolbarText = "Μουσεία";
-
-//                items.add(new PlaceItem(this, R.string.rijksmuseum, R.drawable.rijksmuseum, null, DetailedActivity.Places.Rijksmuseum));
-//                items.add(new PlaceItem(this, R.string.vangogh, R.drawable.vangogh, null, DetailedActivity.Places.VanGogh));
-//                items.add(new PlaceItem(this, R.string.stedelijk, R.drawable.stedelijk, null, DetailedActivity.Places.Stedelijk));
-//                items.add(new PlaceItem(this, R.string.museumRembrand, R.drawable.museum_rembrand, null, DetailedActivity.Places.MuseumRembrand));
-
-                textForMaps = "museums";
-
-                break;
-
             case Hotels:
                 setContentView(R.layout.activity_hotels);
 
@@ -190,6 +177,9 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 items.add(new PlaceItem(this, R.string.cekingRice, R.drawable.ceking_rice, null, DetailedActivity.Places.CekingRice));
                 items.add(new PlaceItem(this, R.string.tanahLot, R.drawable.tanah_lot, null, DetailedActivity.Places.TanahLot));
                 items.add(new PlaceItem(this, R.string.ulunDanu, R.drawable.ulun_danu, null, DetailedActivity.Places.UlunDanu));
+                items.add(new PlaceItem(this, R.string.tamanAyunTemple, R.drawable.taman_ayun_temple, null, DetailedActivity.Places.TamanAyunTemple));
+                items.add(new PlaceItem(this, R.string.tamanUjung, R.drawable.taman_ujung, null, DetailedActivity.Places.TamanUjung));
+                items.add(new PlaceItem(this, R.string.kerthaGosa, R.drawable.kertha_gosa, null, DetailedActivity.Places.KerthaGosa));
 
                 isMapsButtonHidden = true;
 

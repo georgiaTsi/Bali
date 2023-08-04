@@ -3,6 +3,7 @@ package com.example.bali;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -10,9 +11,7 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
 import android.widget.TextView;
 
 public class DetailedActivity extends AppCompatActivity {
@@ -24,7 +23,10 @@ public class DetailedActivity extends AppCompatActivity {
         Monkey,
         TanahLot,
         CekingRice,
-        UlunDanu
+        UlunDanu,
+        TamanAyunTemple,
+        TamanUjung,
+        KerthaGosa
     };
 
     String location = "";
@@ -34,6 +36,8 @@ public class DetailedActivity extends AppCompatActivity {
     Places place;
 
     TextView textView;
+
+    CollapsingToolbarLayout toolBarLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,84 +51,73 @@ public class DetailedActivity extends AppCompatActivity {
 
         place = (Places) getIntent().getExtras().get("place");
 
-        CollapsingToolbarLayout toolBarLayout = findViewById(R.id.toolbar_layout);
+        toolBarLayout = findViewById(R.id.toolbar_layout);
 
         switch (place){
 
             case Tukies:
 
-                toolBarLayout.setTitle(getResources().getString(R.string.tukies));
-                toolBarLayout.setBackground(getDrawable(R.drawable.tukies));
-
-                textView.setText(getResources().getString(R.string.tukiesText));
-
-                location = "-8.507248884296095, 115.2640412490699";
+                addInfo(R.string.tukies, R.drawable.tukies, R.string.tukiesText, "-8.507248884296095, 115.2640412490699");
 
                 break;
 
             case ClearCafe:
 
-                toolBarLayout.setTitle(getResources().getString(R.string.clearCafe));
-                toolBarLayout.setBackground(getDrawable(R.drawable.clear_cafe));
-
-                textView.setText(getResources().getString(R.string.clearCafeText));
-
-                location = "-8.508990874527484, 115.26501990859427";
+                addInfo(R.string.clearCafe, R.drawable.clear_cafe, R.string.clearCafeText, "-8.508990874527484, 115.26501990859427");
 
                 break;
 
             case SimplySocial:
-                toolBarLayout.setTitle(getResources().getString(R.string.simplySocial));
-                toolBarLayout.setBackground(getDrawable(R.drawable.simply_social));
-
-                textView.setText(getResources().getString(R.string.simplySocialText));
-
-                location = "-8.507547284461431, 115.26406675092223";
+                addInfo(R.string.simplySocial, R.drawable.simply_social, R.string.simplySocialText, "-8.507547284461431, 115.26406675092223");
 
                 break;
 
             case Monkey:
-                toolBarLayout.setTitle(getResources().getString(R.string.monkey));
-                toolBarLayout.setBackground(getDrawable(R.drawable.monkey));
-
-                textView.setText(getResources().getString(R.string.monkeyText));
-
-                location = "-8.519094312613257, 115.26067569851755";
+                addInfo(R.string.monkey, R.drawable.monkey, R.string.monkeyText, "-8.519094312613257, 115.26067569851755");
 
                 break;
 
             case TanahLot:
-                toolBarLayout.setTitle(getResources().getString(R.string.tanahLot));
-                toolBarLayout.setBackground(getDrawable(R.drawable.tanah_lot));
-
-                textView.setText(getResources().getString(R.string.tanahLotText));
-
-                location = "-8.6209943633093, 115.08678166705218";
+                addInfo(R.string.tanahLot, R.drawable.tanah_lot, R.string.tanahLotText, "-8.6209943633093, 115.08678166705218");
 
                 break;
 
             case CekingRice:
-                toolBarLayout.setTitle(getResources().getString(R.string.cekingRice));
-                toolBarLayout.setBackground(getDrawable(R.drawable.ceking_rice));
-
-                textView.setText(getResources().getString(R.string.cekingRiceText));
-
-                location = "-8.431546700458268, 115.27930836433387";
+                addInfo(R.string.cekingRice, R.drawable.ceking_rice, R.string.cekingRiceText, "-8.431546700458268, 115.27930836433387");
 
                 break;
 
             case UlunDanu:
-                toolBarLayout.setTitle(getResources().getString(R.string.ulunDanu));
-                toolBarLayout.setBackground(getDrawable(R.drawable.ulun_danu));
+                addInfo(R.string.ulunDanu, R.drawable.ulun_danu, R.string.ulunDanuText, "-8.274894007970275, 115.16685556138685");
 
-                textView.setText(getResources().getString(R.string.ulunDanuText));
+                break;
 
-                location = "-8.274894007970275, 115.16685556138685";
+            case TamanAyunTemple:
+                addInfo(R.string.tamanAyunTemple, R.drawable.taman_ayun_temple, R.string.tamanAyunTempleText, "-8.541473143961893, 115.17256910898536");
+
+                break;
+
+            case TamanUjung:
+                addInfo(R.string.tamanUjung, R.drawable.taman_ujung, R.string.tamanUjungText, "-8.462826381572405, 115.63070136145579");
+
+                break;
+
+            case KerthaGosa:
+                addInfo(R.string.kerthaGosa, R.drawable.kertha_gosa, R.string.kerthaGosaText, "-8.53516448128748, 115.40337588199732");
 
                 break;
         }
 
         sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+    }
+
+    private void addInfo(int title, int drawable, int text, String location) {
+        toolBarLayout.setTitle(getResources().getString(title));
+        toolBarLayout.setBackground(getDrawable(drawable));
+
+        textView.setText(getResources().getString(text));
+
+        this.location = location;
     }
 
     private void openGoogleMaps() {

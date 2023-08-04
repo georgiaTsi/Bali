@@ -67,8 +67,8 @@ public class InfoFragment extends Fragment {
             allItemsList.add(new PlaceItem(getContext(), R.string.checklist, R.drawable.icon_checklist, DetailedWithTitleActivity.GeneralPlaces.Checklist, null));
             allItemsList.add(new PlaceItem(getContext(), R.string.language, R.drawable.icon_language, DetailedWithTitleActivity.GeneralPlaces.Language, null));
         } else {
-            allItemsList.add(new PlaceItem(getContext(), R.string.food, R.drawable.restaurant, DetailedWithTitleActivity.GeneralPlaces.Restaurant, null));
             allItemsList.add(new PlaceItem(getContext(), R.string.attraction, R.drawable.forest, DetailedWithTitleActivity.GeneralPlaces.Attraction, null));
+            allItemsList.add(new PlaceItem(getContext(), R.string.food, R.drawable.restaurant, DetailedWithTitleActivity.GeneralPlaces.Restaurant, null));
         }
 
         itemAdapter.updateAdapter(allItemsList);
