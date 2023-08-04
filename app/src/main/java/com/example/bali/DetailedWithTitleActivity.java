@@ -76,23 +76,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
             case Hotels:
                 setContentView(R.layout.activity_hotels);
 
-                buttonWithLink(findViewById(R.id.imagebutton_hotels_ubudmap), getResources().getString(R.string.hotel_ubud_map));
-                buttonWithLink(findViewById(R.id.imagebutton_hotels_ubudlink), getResources().getString(R.string.hotel_ubud_link));
-
-                buttonWithLink(findViewById(R.id.imagebutton_hotels_uluwatumap), getResources().getString(R.string.hotel_uluwatu_map));
-                buttonWithLink(findViewById(R.id.imagebutton_hotels_uluwatulink), getResources().getString(R.string.hotel_uluwatu_link));
-
-                buttonWithLink(findViewById(R.id.imagebutton_hotels_singaporemap), getResources().getString(R.string.hotel_singapore_map));
-                buttonWithLink(findViewById(R.id.imagebutton_hotels_singaporelink), getResources().getString(R.string.hotel_singapore_link));
-
-                openWhatsApp(findViewById(R.id.imagebutton_hotels_ubudwhatsapp), getResources().getString(R.string.hotel_ubud_phone));
-                openWhatsApp(findViewById(R.id.imagebutton_hotels_uluwatuwhatsapp), getResources().getString(R.string.hotel_uluwatu_phone));
-
-                findViewById(R.id.imagebutton_hotels_singaporewhatsapp).setOnClickListener(v -> {
-                    Intent callIntent = new Intent(Intent.ACTION_CALL);
-                    callIntent.setData(Uri.parse("tel:"+getResources().getString(R.string.hotel_singapore_phone)));
-                    startActivity(callIntent);
-                });
+                addHotels();
 
                 break;
 
@@ -107,53 +91,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
 
                 setContentView(R.layout.fragment_flights);
 
-                FlightAdapter adapter1 = new FlightAdapter(this);
-
-                RecyclerView recyclerView1 = findViewById(R.id.flights_recyclerview);
-                recyclerView1.setLayoutManager(new LinearLayoutManager(this));
-                recyclerView1.setAdapter(adapter1);
-
-                List<FlightInfo> list = new ArrayList<>();
-
-                FlightInfo flightInfoFirst = new FlightInfo();
-                flightInfoFirst.label = "ΑΘήνα - Ντενπασάρ";
-                flightInfoFirst.calendar = ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_9, null);
-                flightInfoFirst.from = "Από: Athens Greece";
-                flightInfoFirst.to = "Προς: Istanbul Airport Turkey";
-                flightInfoFirst.time = "21:45 - 23:15";
-                flightInfoFirst.flightInfo = "Πτήση: TK1846";
-                flightInfoFirst.from1 = "Από: Istanbul Airport Turkey";
-                flightInfoFirst.to1 = "Προς: Denpasar Bali Indonesia";
-                flightInfoFirst.time1 = "01:50 - 19:15";
-                flightInfoFirst.flightInfo1 = "Πτήση: TK66";
-                flightInfoFirst.moreInfo = "Διάρκεια ταξιδιού 16 ώρες και 30 λεπτά\n\nΑναμονή 2 ώρες και 35 λεπτά\n\nTurkish Airlines\nΑποσκευή 30 κιλών και χειραποσκευή 8 κιλών (55x40x23 cm)";
-                list.add(flightInfoFirst);
-
-                FlightInfo flightInfoSecond = new FlightInfo();
-                flightInfoSecond.label = "Ντενπασάρ - Σιγκαπούρη";
-                flightInfoSecond.calendar = ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_21, null);
-                flightInfoSecond.from = "Από: Ngurah Rai Airport I";
-                flightInfoSecond.to = "Προς: Singapore Changi Airport T3";
-                flightInfoSecond.time = "07:20 - 10:00";
-                flightInfoSecond.flightInfo = "Πτήση: SQ949";
-                flightInfoSecond.moreInfo = "Διάρκεια ταξιδιού 2 ώρες και 40 λεπτά\n\nSingapore Airlines\nΑποσκευή 25 κιλών(length+width+height μέχρι 158 cm) και χειραποσκευή 7 κιλών(length+width+height μέχρι 115 cm)";
-                list.add(flightInfoSecond);
-
-                FlightInfo flightInfoThird = new FlightInfo();
-                flightInfoThird.label = "Σιγκαπούρη - Αθήνα";
-                flightInfoThird.calendar = ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_25, null);
-                flightInfoThird.from = "Από: Singapore Changi Αεροσταθμός (Terminal) 1";
-                flightInfoThird.to = "Προς: Istanbul Airport Turkey";
-                flightInfoThird.time = "10:40 - 16:45";
-                flightInfoThird.flightInfo = "Πτήση: TK209";
-                flightInfoThird.from1 = "Από: Istanbul Airport Turkey";
-                flightInfoThird.to1 = "Προς: Athens Greece";
-                flightInfoThird.time1 = "18:50 - 20:15";
-                flightInfoThird.flightInfo1 = "Πτήση: TK1845";
-                flightInfoThird.moreInfo = "Διάρκεια ταξιδιού 14 ώρες και 35 λεπτά\n\nΑναμονή 2 ώρες και 5 λεπτά\n\nTurkish Airlines\nΑποσκευή 30 κιλών και χειραποσκευή 8 κιλών (55x40x23 cm)";
-                list.add(flightInfoThird);
-
-                adapter1.updateAdapter(list);
+                addFlights();
 
                 break;
 
@@ -218,6 +156,76 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
         adapter.updateAdapter(items);
 
         initFabs();
+    }
+
+    private void addHotels() {
+        buttonWithLink(findViewById(R.id.imagebutton_hotels_ubudmap), getResources().getString(R.string.hotel_ubud_map));
+        buttonWithLink(findViewById(R.id.imagebutton_hotels_ubudlink), getResources().getString(R.string.hotel_ubud_link));
+
+        buttonWithLink(findViewById(R.id.imagebutton_hotels_uluwatumap), getResources().getString(R.string.hotel_uluwatu_map));
+        buttonWithLink(findViewById(R.id.imagebutton_hotels_uluwatulink), getResources().getString(R.string.hotel_uluwatu_link));
+
+        buttonWithLink(findViewById(R.id.imagebutton_hotels_singaporemap), getResources().getString(R.string.hotel_singapore_map));
+        buttonWithLink(findViewById(R.id.imagebutton_hotels_singaporelink), getResources().getString(R.string.hotel_singapore_link));
+
+        openWhatsApp(findViewById(R.id.imagebutton_hotels_ubudwhatsapp), getResources().getString(R.string.hotel_ubud_phone));
+        openWhatsApp(findViewById(R.id.imagebutton_hotels_uluwatuwhatsapp), getResources().getString(R.string.hotel_uluwatu_phone));
+
+        findViewById(R.id.imagebutton_hotels_singaporewhatsapp).setOnClickListener(v -> {
+            Intent callIntent = new Intent(Intent.ACTION_CALL);
+            callIntent.setData(Uri.parse("tel:"+getResources().getString(R.string.hotel_singapore_phone)));
+            startActivity(callIntent);
+        });
+    }
+
+    private void addFlights() {
+        FlightAdapter adapter1 = new FlightAdapter(this);
+
+        RecyclerView recyclerView1 = findViewById(R.id.flights_recyclerview);
+        recyclerView1.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView1.setAdapter(adapter1);
+
+        List<FlightInfo> list = new ArrayList<>();
+
+        FlightInfo flightInfoFirst = new FlightInfo();
+        flightInfoFirst.label = "ΑΘήνα - Ντενπασάρ";
+        flightInfoFirst.calendar = ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_9, null);
+        flightInfoFirst.from = "Από: Athens Greece";
+        flightInfoFirst.to = "Προς: Istanbul Airport Turkey";
+        flightInfoFirst.time = "21:45 - 23:15";
+        flightInfoFirst.flightInfo = "Πτήση: TK1846";
+        flightInfoFirst.from1 = "Από: Istanbul Airport Turkey";
+        flightInfoFirst.to1 = "Προς: Denpasar Bali Indonesia";
+        flightInfoFirst.time1 = "01:50 - 19:15";
+        flightInfoFirst.flightInfo1 = "Πτήση: TK66";
+        flightInfoFirst.moreInfo = "Διάρκεια ταξιδιού 16 ώρες και 30 λεπτά\n\nΑναμονή 2 ώρες και 35 λεπτά\n\nTurkish Airlines\nΑποσκευή 30 κιλών και χειραποσκευή 8 κιλών (55x40x23 cm)";
+        list.add(flightInfoFirst);
+
+        FlightInfo flightInfoSecond = new FlightInfo();
+        flightInfoSecond.label = "Ντενπασάρ - Σιγκαπούρη";
+        flightInfoSecond.calendar = ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_21, null);
+        flightInfoSecond.from = "Από: Ngurah Rai Airport I";
+        flightInfoSecond.to = "Προς: Singapore Changi Airport T3";
+        flightInfoSecond.time = "07:20 - 10:00";
+        flightInfoSecond.flightInfo = "Πτήση: SQ949";
+        flightInfoSecond.moreInfo = "Διάρκεια ταξιδιού 2 ώρες και 40 λεπτά\n\nSingapore Airlines\nΑποσκευή 25 κιλών(length+width+height μέχρι 158 cm) και χειραποσκευή 7 κιλών(length+width+height μέχρι 115 cm)";
+        list.add(flightInfoSecond);
+
+        FlightInfo flightInfoThird = new FlightInfo();
+        flightInfoThird.label = "Σιγκαπούρη - Αθήνα";
+        flightInfoThird.calendar = ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_25, null);
+        flightInfoThird.from = "Από: Singapore Changi Αεροσταθμός (Terminal) 1";
+        flightInfoThird.to = "Προς: Istanbul Airport Turkey";
+        flightInfoThird.time = "10:40 - 16:45";
+        flightInfoThird.flightInfo = "Πτήση: TK209";
+        flightInfoThird.from1 = "Από: Istanbul Airport Turkey";
+        flightInfoThird.to1 = "Προς: Athens Greece";
+        flightInfoThird.time1 = "18:50 - 20:15";
+        flightInfoThird.flightInfo1 = "Πτήση: TK1845";
+        flightInfoThird.moreInfo = "Διάρκεια ταξιδιού 14 ώρες και 35 λεπτά\n\nΑναμονή 2 ώρες και 5 λεπτά\n\nTurkish Airlines\nΑποσκευή 30 κιλών και χειραποσκευή 8 κιλών (55x40x23 cm)";
+        list.add(flightInfoThird);
+
+        adapter1.updateAdapter(list);
     }
 
     private void openWhatsApp(View ViewById, String String) {

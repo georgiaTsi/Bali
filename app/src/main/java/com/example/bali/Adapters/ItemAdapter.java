@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.bali.GetWithMeFragment;
 import com.example.bali.R;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,15 +34,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.holder_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_mainactivity_item, parent, false);
 
-        ImageView imageView = view.findViewById(R.id.imageview_holder);
-        TextView textView = view.findViewById(R.id.textview_holder);
-
-        ImageView imageView1 = view.findViewById(R.id.imageview_holder1);
-        TextView textView1 = view.findViewById(R.id.textview_holder1);
-
-        return new ViewHolder(view, imageView, textView, imageView1, textView1);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -64,7 +59,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             if(dataSet.get(position).generalPlace.equals(DetailedWithTitleActivity.GeneralPlaces.Checklist)) {
                 FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
 
-//                Fragment newFragment = new ChecklistFragment();
                 Fragment newFragment = new GetWithMeFragment();
                 transaction.replace(R.id.fragment_container_view, newFragment);
                 transaction.addToBackStack(null);
@@ -77,10 +71,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             }
         });
 
-        //next
+        //hide the second cardview if this is the last item of dataset
         if(position + 1 >= dataSet.size()) {
-            viewHolder.imageView1.setVisibility(View.INVISIBLE);
-            viewHolder.textView1.setVisibility(View.INVISIBLE);
+            viewHolder.secondCardView.setVisibility(View.INVISIBLE);
 
             return;
         }
@@ -118,14 +111,18 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         public TextView textView;
         public ImageView imageView1;
         public TextView textView1;
+        public CardView secondCardView;
 
-        public ViewHolder(View view, ImageView imageView, TextView textView, ImageView imageView1, TextView textView1){
+        public ViewHolder(View view){
             super(view);
 
-            this.imageView = imageView;
-            this.textView = textView;
-            this.imageView1 = imageView1;
-            this.textView1 = textView1;
+            imageView = view.findViewById(R.id.imageview_holder);
+            textView = view.findViewById(R.id.textview_holder);
+
+            imageView1 = view.findViewById(R.id.imageview_holder1);
+            textView1 = view.findViewById(R.id.textview_holder1);
+
+            secondCardView = view.findViewById(R.id.second_cardview);
         }
     }
 }
