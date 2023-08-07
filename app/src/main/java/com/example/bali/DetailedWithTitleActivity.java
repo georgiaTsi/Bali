@@ -102,6 +102,7 @@ public class DetailedWithTitleActivity extends AppCompatActivity {
                 items.add(new PlaceItem(this, R.string.tukies, R.drawable.tukies, null, DetailedActivity.Places.Tukies));
                 items.add(new PlaceItem(this, R.string.clearCafe, R.drawable.clear_cafe, null, DetailedActivity.Places.ClearCafe));
                 items.add(new PlaceItem(this, R.string.simplySocial, R.drawable.simply_social, null, DetailedActivity.Places.SimplySocial));
+                items.add(new PlaceItem(this, R.string.folkPool, R.drawable.folk_pool, null, DetailedActivity.Places.FolkPool));
 
                 break;
 

@@ -117,4 +117,8 @@
     <string name="kerthaGosa">Kertha Gosa</string>
     <string name="kerthaGosaText">Χτίστηκε στις αρχές του 18ου αιώνα ως δικαστήριο και διακοσμήθηκε με ακρίβεια με την αρχαία ζωγραφική του wayang στο κελί του περιπτέρου ως σύμβολο της Kharma Phala.\n\n
         Προτεινόμενη διάρκεια: 1-2 ώρες</string>
+
+    <string name="folkPool">Folk Pool and Gardens</string>
+    <string name="folkPoolText">Το βράδυ έχει και προβολή ταινίας.\n\n
+    Είναι ανοιχτά 10:00-22:00.</string>
 </resources>

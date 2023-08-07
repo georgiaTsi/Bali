@@ -26,7 +26,8 @@ public class DetailedActivity extends AppCompatActivity {
         UlunDanu,
         TamanAyunTemple,
         TamanUjung,
-        KerthaGosa
+        KerthaGosa,
+        FolkPool
     };
 
     String location = "";
@@ -104,6 +105,11 @@ public class DetailedActivity extends AppCompatActivity {
 
             case KerthaGosa:
                 addInfo(R.string.kerthaGosa, R.drawable.kertha_gosa, R.string.kerthaGosaText, "-8.53516448128748, 115.40337588199732");
+
+                break;
+
+            case FolkPool:
+                addInfo(R.string.folkPool, R.drawable.folk_pool, R.string.folkPoolText, "-8.513794414427007, 115.26049625396851");
 
                 break;
         }
