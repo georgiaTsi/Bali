@@ -38,6 +38,21 @@ public class GetWithMeItemAdapter extends RecyclerView.Adapter<GetWithMeItemAdap
         holder.textview.setText(dataSet.get(position).Title);
 
         holder.checkBox.setChecked(dataSet.get(position).IsDeleted);
+
+        holder.textview.setOnClickListener(view1 -> holder.checkBox.setChecked(!holder.checkBox.isChecked()));
+
+        holder.checkBox.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if(isChecked){
+                holder.textview.setPaintFlags(holder.textview.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+            else{
+                holder.textview.setPaintFlags(holder.textview.getPaintFlags() & ~Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+
+            fragment.updateRow(isChecked, dataSet.get(position));
+        });
+
+        holder.delete.setOnClickListener(view12 -> fragment.deleteRow(holder.textview.getText().toString()));
     }
 
     @Override
@@ -62,21 +77,6 @@ public class GetWithMeItemAdapter extends RecyclerView.Adapter<GetWithMeItemAdap
             textview = view.findViewById(R.id.textview_viewholder);
             checkBox = view.findViewById(R.id.checkbox_viewholder);
             delete = view.findViewById(R.id.imagebutton_viewholder_delete);
-
-            textview.setOnClickListener(view1 -> checkBox.setChecked(!checkBox.isChecked()));
-
-            checkBox.setOnCheckedChangeListener((compoundButton, isChecked) -> {
-                if(isChecked){
-                    textview.setPaintFlags(textview.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-                }
-                else{
-                    textview.setPaintFlags(textview.getPaintFlags() & ~Paint.STRIKE_THRU_TEXT_FLAG);
-                }
-
-                fragment.updateRow(textview.getText().toString(), isChecked);
-            });
-
-            delete.setOnClickListener(view12 -> fragment.deleteRow(textview.getText().toString()));
         }
     }
 }

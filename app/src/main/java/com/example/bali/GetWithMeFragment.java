@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -146,8 +147,8 @@ public class GetWithMeFragment extends Fragment {
         updateRecyclerView();
     }
 
-    public void updateRow(String item, boolean isChecked) {
-        String query = String.format("UPDATE GetWithMeList SET IsChecked = '%b' WHERE Title = '" + item + "'", isChecked);
+    public void updateRow(boolean isChecked, GroupItem groupItem) {
+        String query = String.format("UPDATE GetWithMeList SET IsChecked = '%b' WHERE Title = '" + groupItem.Title + "'", isChecked);
         myDatabase.execSQL(query);
     }
     //endregion
