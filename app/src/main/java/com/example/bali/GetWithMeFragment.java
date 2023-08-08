@@ -150,6 +150,11 @@ public class GetWithMeFragment extends Fragment {
     public void updateRow(boolean isChecked, GroupItem groupItem) {
         String query = String.format("UPDATE GetWithMeList SET IsChecked = '%b' WHERE Title = '" + groupItem.Title + "'", isChecked);
         myDatabase.execSQL(query);
+
+        ArrayList<Group> items = readFromDatabase();
+        adapter.updateAdapterWithoutNotify(items);
+
+        adapter.notifyItemChanged(adapter.getPositionByLabel(groupItem.Label));
     }
     //endregion
 

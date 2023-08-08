@@ -128,6 +128,10 @@ public class GetWithMeAdapter extends RecyclerView.Adapter<GetWithMeAdapter.Grou
         notifyDataSetChanged();
     }
 
+    public void updateAdapterWithoutNotify(List<GetWithMeFragment.Group> newDataset) {
+        dataSet = newDataset;
+    }
+
     public int getPositionByLabel(String label){
         for(int i = 0; i < dataSet.size(); i++){
             if(dataSet.get(i).Label.equals(label))
