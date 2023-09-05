@@ -111,8 +111,10 @@ public class GetWithMeAdapter extends RecyclerView.Adapter<GetWithMeAdapter.Grou
 
         int all = list.size();
 
-        if(all == done)
+        if(all == done && all != 0)
             textViewTitle.setPaintFlags(textViewTitle.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        else
+            textViewTitle.setPaintFlags(textViewTitle.getPaintFlags() & ~Paint.STRIKE_THRU_TEXT_FLAG);
 
         return "(" + done + "/" + all + ")";
     }
