@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.bali.DetailedActivity">
     <item
-        android:id="@+id/action_notes"
+        android:id="@+id/action_add"
         android:orderInCategory="100"
-        android:title="@string/action_notes"
-        android:icon="@drawable/notes"
+        android:title="Add"
+        android:icon="@drawable/plus"
         android:iconTint="@color/white"
         app:showAsAction="always" />
 </menu>

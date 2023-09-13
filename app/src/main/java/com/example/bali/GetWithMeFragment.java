@@ -4,13 +4,20 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -41,14 +48,28 @@ public class GetWithMeFragment extends Fragment {
 
         initRecyclerView(recyclerView);
 
+        setHasOptionsMenu(true);
+
         return view;
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_getwithme, menu);
+        MenuItem menuItem = menu.findItem(R.id.action_add);
 
-        FloatingActionButton fab = view.findViewById(R.id.fab);
-        fab.setOnClickListener(view1 -> {
+// Tint the icon to white
+        Drawable icon = menuItem.getIcon();
+        icon.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+        menuItem.setIcon(icon);
+
+
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_add) {
             final EditText input = new EditText(getContext());
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
@@ -68,7 +89,10 @@ public class GetWithMeFragment extends Fragment {
                     // A null listener allows the button to dismiss the dialog and take no further action.
                     .setNegativeButton(android.R.string.no, null)
                     .show();
-        });
+
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     //region RecyclerView
