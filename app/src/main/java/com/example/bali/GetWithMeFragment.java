@@ -56,13 +56,12 @@ public class GetWithMeFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_getwithme, menu);
+
         MenuItem menuItem = menu.findItem(R.id.action_add);
 
-// Tint the icon to white
         Drawable icon = menuItem.getIcon();
         icon.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
         menuItem.setIcon(icon);
-
 
         super.onCreateOptionsMenu(menu, inflater);
     }
@@ -71,10 +70,7 @@ public class GetWithMeFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_add) {
             final EditText input = new EditText(getContext());
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.MATCH_PARENT);
-            input.setLayoutParams(lp);
+            input.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
 
             new AlertDialog.Builder(getContext())
                     .setTitle("Add Group item")
@@ -97,16 +93,13 @@ public class GetWithMeFragment extends Fragment {
 
     //region RecyclerView
     private void initRecyclerView(RecyclerView recyclerView) {
-        ArrayList<Group> items = readFromDatabase();
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        adapter = new GetWithMeAdapter(this, items);
+        adapter = new GetWithMeAdapter(this, readFromDatabase());
         recyclerView.setAdapter(adapter);
     }
 
     private void updateRecyclerView() {
-        ArrayList<Group> items = readFromDatabase();
-        adapter.updateAdapter(items);
+        adapter.updateAdapter(readFromDatabase());
     }
 
     private ArrayList<Group> readFromDatabase() {

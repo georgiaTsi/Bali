@@ -24,7 +24,7 @@ import java.util.List;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
-    List<PlaceItem> dataSet = new ArrayList<PlaceItem>();
+    List<PlaceItem> dataSet = new ArrayList<>();
 
     MainActivity activity;
 
@@ -34,9 +34,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_mainactivity_item, parent, false);
-
-        return new ViewHolder(view);
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_mainactivity_item, parent, false));
     }
 
     @Override
